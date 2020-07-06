@@ -1,0 +1,3 @@
+timestamp,ping_time,ping_sequence,dropped_packets,rtt_ms,system_id,component_id
+32806054,32502199,2,0,303.855,255,0
+42636309,42506305,3,0,130.004,255,0
