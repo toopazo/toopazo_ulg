@@ -267,7 +267,7 @@ class UlgPlotter:
 
         # 1 sec = 10**6 microsec
         # Actual SPS in log files is approx 10
-        wind    ow = 10*2
+        window = 10*2
         lenx = len(x)
         if window > lenx:
             window = lenx

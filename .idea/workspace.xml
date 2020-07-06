@@ -29,8 +29,8 @@
       <file leaf-file-name="toopazo_ulgPlotter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgPlotter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="269" column="12" selection-start-line="269" selection-start-column="12" selection-end-line="269" selection-end-column="12" />
+            <state relative-caret-position="170">
+              <caret line="271" column="12" selection-start-line="271" selection-start-column="12" selection-end-line="271" selection-end-column="12" />
               <folding>
                 <element signature="e#61#106#0" expanded="true" />
               </folding>
@@ -134,6 +134,7 @@
         <option value="$PROJECT_DIR$/toopazo_ulgParser.py" />
         <option value="$PROJECT_DIR$/toopazo_ulgMain.py" />
         <option value="$PROJECT_DIR$/toopazo_ulgPlotter.py" />
+        <option value="$PROJECT_DIR$/../ulgPlotter/toopazo_ulgPlotter.py" />
       </list>
     </option>
   </component>
@@ -611,8 +612,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgPlotter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="269" column="12" selection-start-line="269" selection-start-column="12" selection-end-line="269" selection-end-column="12" />
+        <state relative-caret-position="170">
+          <caret line="271" column="12" selection-start-line="271" selection-start-column="12" selection-end-line="271" selection-end-column="12" />
           <folding>
             <element signature="e#61#106#0" expanded="true" />
           </folding>
