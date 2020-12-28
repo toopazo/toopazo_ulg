@@ -2,361 +2,732 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c1b8ce5-1502-4742-a9f2-2e616adc27bd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ulg_plot_figures.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ulg_plot_mixer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ulg_plot_sysid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ulgPlotter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ulgPlotter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_75_2019-5-30-13-18-50.ulg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_76_2019-5-30-13-36-20.ulg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_77_2019-5-30-13-52-00.ulg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_78_2019-5-30-13-53-56.ulg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_79_2019-5-30-13-59-36.ulg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_80_2019-5-30-14-23-02.ulg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_81_2019-5-30-14-26-24.ulg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_82_2019-5-30-14-32-48.ulg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_83_2019-5-30-14-36-54.ulg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_84_2019-5-30-14-41-30.ulg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_96_2018-5-24-08-50-46.px4log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_97_2018-5-24-09-02-36.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_97_2018-5-24-09-02-36.px4log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_98_2018-5-24-09-20-46.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_98_2018-5-24-09-20-46.px4log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_99_2018-5-24-09-33-14.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log_99_2018-5-24-09-33-14.px4log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_75_2019-5-30-13-18-50_actuator_outputs_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_75_2019-5-30-13-18-50_hover_nwindow_pos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_75_2019-5-30-13-18-50_hover_nwindow_vel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_76_2019-5-30-13-36-20_actuator_outputs_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_76_2019-5-30-13-36-20_hover_nwindow_pos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_76_2019-5-30-13-36-20_hover_nwindow_vel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_77_2019-5-30-13-52-00_actuator_outputs_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_77_2019-5-30-13-52-00_hover_nwindow_pos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_77_2019-5-30-13-52-00_hover_nwindow_vel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_78_2019-5-30-13-53-56_actuator_outputs_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_78_2019-5-30-13-53-56_hover_nwindow_pos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_78_2019-5-30-13-53-56_hover_nwindow_vel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_79_2019-5-30-13-59-36_actuator_outputs_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_79_2019-5-30-13-59-36_hover_nwindow_pos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_79_2019-5-30-13-59-36_hover_nwindow_vel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_80_2019-5-30-14-23-02_actuator_outputs_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_80_2019-5-30-14-23-02_hover_nwindow_pos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_80_2019-5-30-14-23-02_hover_nwindow_vel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_81_2019-5-30-14-26-24_actuator_outputs_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_81_2019-5-30-14-26-24_hover_nwindow_pos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_81_2019-5-30-14-26-24_hover_nwindow_vel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_82_2019-5-30-14-32-48_actuator_outputs_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_82_2019-5-30-14-32-48_hover_nwindow_pos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_82_2019-5-30-14-32-48_hover_nwindow_vel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_83_2019-5-30-14-36-54_actuator_outputs_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_83_2019-5-30-14-36-54_hover_nwindow_pos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_83_2019-5-30-14-36-54_hover_nwindow_vel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_84_2019-5-30-14-41-30_actuator_outputs_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_84_2019-5-30-14-41-30_hover_nwindow_pos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/log_84_2019-5-30-14-41-30_hover_nwindow_vel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_actuator_controls_0_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_actuator_outputs_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_actuator_outputs_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_battery_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_battery_status_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_cpuload_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_ekf2_innovations_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_ekf2_timestamps_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_estimator_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_input_rc_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_manual_control_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_ping_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_rate_ctrl_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_safety_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_sensor_combined_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_sensor_preflight_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_sensor_selection_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_system_power_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_telemetry_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_air_data_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_attitude_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_gps_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_land_detected_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_local_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_local_position_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_magnetometer_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_rates_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_status_flags_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_actuator_controls_0_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_actuator_outputs_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_actuator_outputs_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_battery_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_battery_status_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_cpuload_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_ekf2_innovations_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_ekf2_timestamps_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_estimator_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_input_rc_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_manual_control_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_ping_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_rate_ctrl_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_safety_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_sensor_combined_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_sensor_preflight_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_sensor_selection_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_system_power_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_telemetry_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_air_data_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_attitude_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_gps_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_land_detected_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_local_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_magnetometer_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_rates_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_status_flags_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_actuator_controls_0_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_actuator_outputs_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_actuator_outputs_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_battery_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_battery_status_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_cpuload_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_ekf2_innovations_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_ekf2_timestamps_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_estimator_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_input_rc_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_manual_control_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_ping_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_rate_ctrl_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_safety_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_sensor_combined_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_sensor_preflight_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_sensor_selection_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_system_power_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_telemetry_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_air_data_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_attitude_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_gps_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_land_detected_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_local_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_magnetometer_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_rates_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_status_flags_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_actuator_controls_0_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_actuator_outputs_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_actuator_outputs_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_battery_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_battery_status_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_cpuload_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_ekf2_innovations_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_ekf2_timestamps_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_estimator_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_input_rc_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_manual_control_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_ping_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_rate_ctrl_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_safety_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_sensor_combined_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_sensor_preflight_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_system_power_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_telemetry_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_air_data_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_attitude_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_gps_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_land_detected_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_local_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_magnetometer_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_rates_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_status_flags_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_actuator_controls_0_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_actuator_outputs_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_actuator_outputs_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_battery_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_battery_status_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_cpuload_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_ekf2_innovations_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_ekf2_timestamps_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_estimator_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_home_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_input_rc_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_manual_control_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_ping_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_rate_ctrl_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_safety_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_sensor_combined_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_sensor_preflight_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_system_power_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_telemetry_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_air_data_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_attitude_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_global_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_gps_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_land_detected_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_local_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_magnetometer_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_rates_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_status_flags_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_actuator_controls_0_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_actuator_outputs_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_actuator_outputs_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_battery_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_battery_status_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_cpuload_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_ekf2_innovations_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_ekf2_timestamps_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_estimator_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_home_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_input_rc_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_manual_control_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_ping_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_rate_ctrl_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_safety_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_sensor_combined_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_sensor_preflight_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_system_power_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_telemetry_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_air_data_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_attitude_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_global_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_gps_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_land_detected_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_local_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_magnetometer_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_rates_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_status_flags_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_actuator_controls_0_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_actuator_outputs_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_actuator_outputs_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_battery_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_battery_status_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_cpuload_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_ekf2_innovations_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_ekf2_timestamps_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_estimator_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_home_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_input_rc_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_manual_control_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_ping_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_rate_ctrl_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_safety_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_sensor_combined_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_sensor_preflight_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_system_power_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_telemetry_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_air_data_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_attitude_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_global_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_gps_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_land_detected_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_local_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_magnetometer_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_rates_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_status_flags_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_actuator_controls_0_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_actuator_outputs_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_actuator_outputs_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_battery_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_battery_status_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_cpuload_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_ekf2_innovations_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_ekf2_timestamps_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_estimator_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_home_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_input_rc_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_manual_control_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_ping_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_rate_ctrl_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_safety_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_sensor_combined_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_sensor_preflight_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_system_power_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_telemetry_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_air_data_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_attitude_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_global_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_gps_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_land_detected_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_local_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_magnetometer_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_rates_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_status_flags_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_actuator_controls_0_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_actuator_outputs_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_actuator_outputs_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_battery_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_battery_status_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_cpuload_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_ekf2_innovations_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_ekf2_timestamps_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_estimator_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_home_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_input_rc_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_manual_control_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_ping_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_rate_ctrl_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_safety_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_sensor_combined_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_sensor_preflight_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_system_power_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_telemetry_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_air_data_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_attitude_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_global_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_gps_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_land_detected_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_local_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_magnetometer_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_rates_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_status_flags_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_actuator_controls_0_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_actuator_outputs_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_actuator_outputs_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_battery_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_battery_status_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_cpuload_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_ekf2_innovations_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_ekf2_timestamps_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_estimator_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_input_rc_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_manual_control_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_ping_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_rate_ctrl_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_safety_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_sensor_combined_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_sensor_preflight_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_sensor_selection_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_system_power_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_telemetry_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_air_data_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_attitude_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_gps_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_land_detected_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_local_position_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_magnetometer_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_rates_setpoint_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_status_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_status_flags_0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toopazo_statistics.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toopazo_ulgMain.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulg_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toopazo_ulgParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulg_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toopazo_ulgPlotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulg_plot_basics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toopazo_utilities.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/least_square_fit.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/logs/log_79_2019-5-30-13-59-36.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_home_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_vehicle_attitude_0_deg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_vehicle_global_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_cifer/tmp/log_79_2019-5-30-13-59-36_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/least_square_fit.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/logs/log_134_2020-12-18-11-49-04.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/plots/log_134_2020-12-18-11-49-04_actuator_controls_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/plots/log_134_2020-12-18-11-49-04_actuator_outputs_0_a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/plots/log_134_2020-12-18-11-49-04_actuator_outputs_0_b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/plots/log_134_2020-12-18-11-49-04_toopazo_ctrlalloc_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/plots/log_134_2020-12-18-11-49-04_toopazo_ctrlalloc_0_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/plots/log_134_2020-12-18-11-49-04_toopazo_ctrlalloc_0_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/plots/log_134_2020-12-18-11-49-04_toopazo_ctrlalloc_0_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/plots/log_134_2020-12-18-11-49-04_toopazo_ctrlalloc_0_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/plots/log_134_2020-12-18-11-49-04_toopazo_ctrlalloc_0_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/plots/log_134_2020-12-18-11-49-04_toopazo_ctrlalloc_0_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/plots/log_134_2020-12-18-11-49-04_toopazo_ctrlalloc_0_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_manual_control_setpoint_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_rc_channels_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_toopazo_ctrlalloc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_vehicle_attitude_0_deg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_mixer/tmp/log_134_2020-12-18-11-49-04_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_75_2019-5-30-13-18-50.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_76_2019-5-30-13-36-20.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_77_2019-5-30-13-52-00.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_78_2019-5-30-13-53-56.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_79_2019-5-30-13-59-36.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_80_2019-5-30-14-23-02.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_81_2019-5-30-14-26-24.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_82_2019-5-30-14-32-48.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_83_2019-5-30-14-36-54.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_84_2019-5-30-14-41-30.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_96_2018-5-24-08-50-46.px4log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_97_2018-5-24-09-02-36.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_97_2018-5-24-09-02-36.px4log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_98_2018-5-24-09-20-46.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_98_2018-5-24-09-20-46.px4log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_99_2018-5-24-09-33-14.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/logs/log_99_2018-5-24-09-33-14.px4log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_75_2019-5-30-13-18-50_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_75_2019-5-30-13-18-50_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_75_2019-5-30-13-18-50_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_76_2019-5-30-13-36-20_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_76_2019-5-30-13-36-20_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_76_2019-5-30-13-36-20_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_77_2019-5-30-13-52-00_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_77_2019-5-30-13-52-00_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_77_2019-5-30-13-52-00_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_78_2019-5-30-13-53-56_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_78_2019-5-30-13-53-56_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_78_2019-5-30-13-53-56_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_79_2019-5-30-13-59-36_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_79_2019-5-30-13-59-36_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_79_2019-5-30-13-59-36_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_80_2019-5-30-14-23-02_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_80_2019-5-30-14-23-02_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_80_2019-5-30-14-23-02_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_81_2019-5-30-14-26-24_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_81_2019-5-30-14-26-24_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_81_2019-5-30-14-26-24_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_82_2019-5-30-14-32-48_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_82_2019-5-30-14-32-48_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_82_2019-5-30-14-32-48_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_83_2019-5-30-14-36-54_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_83_2019-5-30-14-36-54_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_83_2019-5-30-14-36-54_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_84_2019-5-30-14-41-30_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_84_2019-5-30-14-41-30_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/plots/log_84_2019-5-30-14-41-30_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_vehicle_local_position_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_75_2019-5-30-13-18-50_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_76_2019-5-30-13-36-20_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_77_2019-5-30-13-52-00_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_78_2019-5-30-13-53-56_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_home_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_vehicle_global_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_79_2019-5-30-13-59-36_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_home_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_vehicle_global_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_80_2019-5-30-14-23-02_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_home_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_vehicle_global_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_81_2019-5-30-14-26-24_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_home_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_vehicle_global_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_82_2019-5-30-14-32-48_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_home_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_vehicle_global_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_83_2019-5-30-14-36-54_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefly_others/tmp/log_84_2019-5-30-14-41-30_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/least_square_fit.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/logs/log_148_2020-12-11-17-44-16.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/logs/log_149_2020-12-14-15-50-02.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/logs/log_152_2020-12-14-16-35-46.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_148_2020-12-11-17-44-16_actuator_controls_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_148_2020-12-11-17-44-16_actuator_outputs_0_a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_148_2020-12-11-17-44-16_actuator_outputs_0_b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_148_2020-12-11-17-44-16_toopazo_ctrlalloc_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_148_2020-12-11-17-44-16_toopazo_ctrlalloc_0_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_148_2020-12-11-17-44-16_toopazo_ctrlalloc_0_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_148_2020-12-11-17-44-16_toopazo_ctrlalloc_0_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_149_2020-12-14-15-50-02_actuator_controls_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_149_2020-12-14-15-50-02_actuator_outputs_0_a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_149_2020-12-14-15-50-02_actuator_outputs_0_b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_149_2020-12-14-15-50-02_toopazo_ctrlalloc_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_149_2020-12-14-15-50-02_toopazo_ctrlalloc_0_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_149_2020-12-14-15-50-02_toopazo_ctrlalloc_0_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_149_2020-12-14-15-50-02_toopazo_ctrlalloc_0_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_152_2020-12-14-16-35-46_actuator_controls_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_152_2020-12-14-16-35-46_actuator_outputs_0_a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_152_2020-12-14-16-35-46_actuator_outputs_0_b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_152_2020-12-14-16-35-46_toopazo_ctrlalloc_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_152_2020-12-14-16-35-46_toopazo_ctrlalloc_0_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_152_2020-12-14-16-35-46_toopazo_ctrlalloc_0_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/plots/log_152_2020-12-14-16-35-46_toopazo_ctrlalloc_0_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_manual_control_setpoint_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_rc_channels_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_toopazo_ctrlalloc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_vehicle_attitude_0_deg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_148_2020-12-11-17-44-16_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_manual_control_setpoint_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_rc_channels_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_toopazo_ctrlalloc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_vehicle_attitude_0_deg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_149_2020-12-14-15-50-02_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_manual_control_setpoint_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_rc_channels_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_toopazo_ctrlalloc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_vehicle_attitude_0_deg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer1/tmp/log_152_2020-12-14-16-35-46_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/logs/log_153_2020-12-15-12-23-54.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/logs/log_154_2020-12-15-12-29-46.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/logs/log_155_2020-12-15-12-31-54.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/logs/log_156_2020-12-15-12-32-12.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/logs/log_157_2020-12-15-12-35-08.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_153_2020-12-15-12-23-54_actuator_controls_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_153_2020-12-15-12-23-54_actuator_outputs_0_a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_153_2020-12-15-12-23-54_actuator_outputs_0_b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_153_2020-12-15-12-23-54_toopazo_ctrlalloc_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_153_2020-12-15-12-23-54_toopazo_ctrlalloc_0_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_153_2020-12-15-12-23-54_toopazo_ctrlalloc_0_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_153_2020-12-15-12-23-54_toopazo_ctrlalloc_0_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_154_2020-12-15-12-29-46_actuator_controls_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_154_2020-12-15-12-29-46_actuator_outputs_0_a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_154_2020-12-15-12-29-46_actuator_outputs_0_b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_154_2020-12-15-12-29-46_toopazo_ctrlalloc_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_154_2020-12-15-12-29-46_toopazo_ctrlalloc_0_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_154_2020-12-15-12-29-46_toopazo_ctrlalloc_0_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_154_2020-12-15-12-29-46_toopazo_ctrlalloc_0_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_155_2020-12-15-12-31-54_actuator_controls_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_155_2020-12-15-12-31-54_actuator_outputs_0_a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_155_2020-12-15-12-31-54_actuator_outputs_0_b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_155_2020-12-15-12-31-54_toopazo_ctrlalloc_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_155_2020-12-15-12-31-54_toopazo_ctrlalloc_0_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_155_2020-12-15-12-31-54_toopazo_ctrlalloc_0_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_155_2020-12-15-12-31-54_toopazo_ctrlalloc_0_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_156_2020-12-15-12-32-12_actuator_controls_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_156_2020-12-15-12-32-12_actuator_outputs_0_a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_156_2020-12-15-12-32-12_actuator_outputs_0_b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_156_2020-12-15-12-32-12_toopazo_ctrlalloc_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_156_2020-12-15-12-32-12_toopazo_ctrlalloc_0_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_156_2020-12-15-12-32-12_toopazo_ctrlalloc_0_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_156_2020-12-15-12-32-12_toopazo_ctrlalloc_0_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_157_2020-12-15-12-35-08_actuator_controls_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_157_2020-12-15-12-35-08_actuator_outputs_0_a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_157_2020-12-15-12-35-08_actuator_outputs_0_b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_157_2020-12-15-12-35-08_toopazo_ctrlalloc_0_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_157_2020-12-15-12-35-08_toopazo_ctrlalloc_0_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_157_2020-12-15-12-35-08_toopazo_ctrlalloc_0_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/plots/log_157_2020-12-15-12-35-08_toopazo_ctrlalloc_0_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_manual_control_setpoint_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_rc_channels_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_toopazo_ctrlalloc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_vehicle_attitude_0_deg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_153_2020-12-15-12-23-54_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_manual_control_setpoint_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_rc_channels_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_toopazo_ctrlalloc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_vehicle_attitude_0_deg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_154_2020-12-15-12-29-46_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_manual_control_setpoint_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_rc_channels_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_toopazo_ctrlalloc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_vehicle_attitude_0_deg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_155_2020-12-15-12-31-54_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_manual_control_setpoint_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_rc_channels_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_toopazo_ctrlalloc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_vehicle_attitude_0_deg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_156_2020-12-15-12-32-12_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_manual_control_setpoint_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_rc_channels_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_toopazo_ctrlalloc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_vehicle_attitude_0_deg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/housefly_mixer2/tmp/log_157_2020-12-15-12-35-08_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ulg_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulg_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ulg_plot_basics.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulg_plot_basics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ulg_plot_figures.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulg_plot_figures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ulg_plot_mixer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulg_plot_mixer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ulg_plot_sysid.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulg_plot_sysid.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -373,43 +744,10 @@
       <file leaf-file-name="ulg_main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ulg_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ulg_plot_mixer.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ulg_plot_mixer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="238" column="23" selection-start-line="238" selection-start-column="23" selection-end-line="238" selection-end-column="23" />
+            <state relative-caret-position="306">
+              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
               <folding>
-                <element signature="e#23#69#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ulg_plot_basics.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#23#69#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ulg_plot_figures.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ulg_plot_figures.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
-              <folding>
-                <element signature="e#23#54#0" expanded="true" />
+                <element signature="e#23#77#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -418,11 +756,53 @@
       <file leaf-file-name="ulg_parser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ulg_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1870">
+            <state relative-caret-position="328">
               <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
               <folding>
                 <element signature="e#23#40#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ulg_plot_basics.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <folding>
+                <element signature="e#23#77#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ulg_plot_sysid.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ulg_plot_sysid.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="61" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ulg_plot_mixer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ulg_plot_mixer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="131" column="51" selection-start-line="131" selection-start-column="51" selection-end-line="131" selection-end-column="51" />
+              <folding>
+                <element signature="e#132#193#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -438,19 +818,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>UlgPlotMixer.check_data1d</find>
-      <find>pinv</find>
-      <find>csvname</find>
-      <find>x</find>
-      <find>xvect</find>
-      <find>fig = plt.figure()</find>
-      <find>tvect</find>
-      <find>1</find>
-      <find>,  2</find>
-      <find>, 2</find>
-      <find>2.0000</find>
-      <find>1.4142</find>
-      <find>'outputs'</find>
       <find>outputs</find>
       <find>2d(</find>
       <find>1000</find>
@@ -464,14 +831,25 @@
       <find>save</find>
       <find>_bias</find>
       <find>UlgPlotFigures</find>
-      <find>get_jpgfilename</find>
       <find>UlgPlotFigures.get_jpgfilename</find>
       <find>PlotUtils.savefig</find>
+      <find>UlgPlotFigures.</find>
       <find>ax1_x1_y2</find>
+      <find>UlgPlotBasics</find>
+      <find>np</find>
+      <find>get_jpgfilename</find>
+      <find>JpgFilename.get_jpgfilename</find>
+      <find>PlotUtils</find>
+      <find>create_fig_axes</find>
+      <find>datetime</find>
+      <find>ax1_</find>
+      <find>.ax1_</find>
+      <find>x,</find>
+      <find>arr, x,</find>
+      <find>fig</find>
+      <find>UlgParser</find>
     </findStrings>
     <replaceStrings>
-      <replace>xis = 'std</replace>
-      <replace>_</replace>
       <replace>= std_arr</replace>
       <replace>i0:iN</replace>
       <replace>plot_nwindow_hover</replace>
@@ -500,6 +878,8 @@
       <replace>UlgPlotBasics</replace>
       <replace>JpgFilename.get_jpgfilename</replace>
       <replace>FigureUtils.savefig</replace>
+      <replace>PlotUtils.ax</replace>
+      <replace>self.get_jpgfilename</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -526,22 +906,22 @@
         <option value="$PROJECT_DIR$/ulgp_main.py" />
         <option value="$PROJECT_DIR$/ulg_plot_handlers.py" />
         <option value="$PROJECT_DIR$/ulg_plotter.py" />
-        <option value="$PROJECT_DIR$/ulg_plot_sysid.py" />
         <option value="$PROJECT_DIR$/ulg_main_sysid.py" />
         <option value="$PROJECT_DIR$/ulg_main_basics.py" />
-        <option value="$PROJECT_DIR$/ulg_plot_basics.py" />
         <option value="$PROJECT_DIR$/ulg_parser.py" />
-        <option value="$PROJECT_DIR$/ulg_main.py" />
         <option value="$PROJECT_DIR$/ulg_plot_figures.py" />
+        <option value="$PROJECT_DIR$/ulg_plot_sysid.py" />
+        <option value="$PROJECT_DIR$/ulg_main.py" />
         <option value="$PROJECT_DIR$/ulg_plot_mixer.py" />
+        <option value="$PROJECT_DIR$/ulg_plot_basics.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="297" />
-    <option name="y" value="1046" />
-    <option name="width" value="1383" />
-    <option name="height" value="814" />
+    <option name="y" value="-4" />
+    <option name="width" value="1680" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -608,10 +988,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="297" y="1046" width="1383" height="814" extended-state="6" />
+    <frame x="57" y="-4" width="1303" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49380806" visible="true" weight="0.230658" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49380806" visible="true" weight="0.2210284" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -640,14 +1020,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ulg_main_sysid.py" />
-    <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4950">
-          <caret line="225" column="39" selection-start-line="225" selection-start-column="39" selection-end-line="225" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/toopazo_utilities.py" />
     <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -797,50 +1169,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/toopazo_utilities.py" />
     <entry file="file://$PROJECT_DIR$/ulg_main_sysid.py" />
-    <entry file="file://$PROJECT_DIR$/ulg_plot_sysid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ulg_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#23#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ulg_plot_figures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
-          <folding>
-            <element signature="e#23#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mixer_and_least_square_fit.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -854,13 +1182,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ulg_plot_figures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.7/site-packages/tpylib_pkg/matplotlibUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="162" column="8" selection-start-line="162" selection-start-column="8" selection-end-line="162" selection-end-column="8" />
+          <folding>
+            <element signature="e#23#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulg_plot_sysid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="61" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulg_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding>
+            <element signature="e#23#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="e#23#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
+          <folding>
+            <element signature="e#23#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ulg_plot_mixer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="238" column="23" selection-start-line="238" selection-start-column="23" selection-end-line="238" selection-end-column="23" />
+        <state relative-caret-position="308">
+          <caret line="131" column="51" selection-start-line="131" selection-start-column="51" selection-end-line="131" selection-end-column="51" />
           <folding>
-            <element signature="e#23#69#0" expanded="true" />
+            <element signature="e#132#193#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
     </entry>

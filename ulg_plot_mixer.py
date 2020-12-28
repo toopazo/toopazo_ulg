@@ -1,48 +1,16 @@
 #!/usr/bin/env python
 
-from datetime import datetime   # , date, time
-# import matplotlib.pyplot as plt
+# from tpylib_pkg.fileFolderUtils import FileFolderUtils
+# from tpylib_pkg.statistics import TimeseriesStats
+from tpylib_pkg.matplotlibUtils import PlotUtils, FigureUtils
+from ulg_parser import UlgParser
+from ulg_plot_basics import UlgPlotBasics
+
 import numpy as np
 import scipy.linalg as scipy_linalg
 
-from tpylib_pkg.fileFolderUtils import FileFolderUtils
-# from tpylib_pkg.statistics import TimeseriesStats
-from ulg_parser import UlgParser
-# from ulg_plot_figures import UlgPlotFigures
-from tpylib_pkg.matplotlibUtils import PlotUtils, FigureUtils
-# import pprint
-# from pandas import DataFrame
 
-# class MatrixData:
-#     def __init__(self, xvect):
-#         self.nsamples = len(xvect[0])
-#         self.nvariables = len(xvect)
-#         self.matrix = np.array(xvect)
-
-
-class JpgFilename:
-    @staticmethod
-    def get_jpgfilename(fpath, ulgfile, csvname):
-        ulgfile = FileFolderUtils.get_basename(ulgfile)
-        filename = ulgfile.replace('.ulg', '_') + csvname + '.jpg'
-        filename = fpath + '/' + filename
-        return filename
-
-
-class UlgPlotMixer:
-    def __init__(self, logdir, tmpdir, plotdir):
-        self.logdir = logdir
-        self.tmpdir = tmpdir
-        self.plotdir = plotdir
-
-    @staticmethod
-    def timestamp_to_datetime(x):
-        xdt = []
-        for tstamp in x:
-            xdt.append(datetime.fromtimestamp(tstamp))
-        x = xdt
-        return x
-
+class UlgPlotMixer(UlgPlotBasics):
     @staticmethod
     def check_data(data, vmin, vmax):
         # print('[check_data] type(data) %s' % type(data))
@@ -235,8 +203,10 @@ class UlgPlotMixer:
 
         print('[mixer_input_output] xvect.shape %s' % str(xvect.shape))
         print('[mixer_input_output] yvect.shape %s' % str(yvect.shape))
-        print('[mixer_input_output] eval_yvect.shape %s' % str(eval_yvect.shape))
-        print('[mixer_input_output] eval_yvect.shape %s' % str(eval_yvect.shape))
+        print('[mixer_input_output] eval_yvect.shape %s'
+              % str(eval_yvect.shape))
+        print('[mixer_input_output] eval_yvect.shape %s'
+              % str(eval_yvect.shape))
 
         for i in range(variable0, variable1):
             csvname_i = csvname + ('_%s' % i)
@@ -259,18 +229,18 @@ class UlgPlotMixer:
             # ax1.tick_params(axis=u'y', which=u'both', length=0)
 
             # plt.show()
-            jpgfilename = JpgFilename.get_jpgfilename(
+            jpgfilename = self.get_jpgfilename(
                 self.plotdir, ulgfile, csvname_i)
             FigureUtils.savefig(jpgfilename, closefig)
 
     @staticmethod
     def least_square_eval(xvect, yvect, lsq_matrix, lsq_bias):
-        arg = """
-        # UlgPlotMixer.least_square_eval(xvect, yvect)
-        #   xvect = [x0, x1, x2, x3]
-        #   yvect = [y0, y1, y2, y3, y4, y5, y6, y7]
-        #   It is assumed that xi and yj are arrays with nsamples
-        """
+        # arg = """
+        # # UlgPlotMixer.least_square_eval(xvect, yvect)
+        # #   xvect = [x0, x1, x2, x3]
+        # #   yvect = [y0, y1, y2, y3, y4, y5, y6, y7]
+        # #   It is assumed that xi and yj are arrays with nsamples
+        # """
         # print(arg)
 
         nsamples = len(xvect[0])
@@ -304,12 +274,12 @@ class UlgPlotMixer:
 
     @staticmethod
     def least_square_fit(xvect, yvect):
-        arg = """
-        # UlgPlotMixer.least_square_fit(xvect, yvect)
-        #   xvect = [x0, x1, x2, x3]
-        #   yvect = [y0, y1, y2, y3, y4, y5, y6, y7]
-        #   It is assumed that xi and yj are arrays with nsamples
-        """
+        # arg = """
+        # # UlgPlotMixer.least_square_fit(xvect, yvect)
+        # #   xvect = [x0, x1, x2, x3]
+        # #   yvect = [y0, y1, y2, y3, y4, y5, y6, y7]
+        # #   It is assumed that xi and yj are arrays with nsamples
+        # """
         # print(arg)
 
         nsamples = len(xvect[0])
@@ -428,72 +398,72 @@ class UlgPlotMixer:
         print(matrix)
 
         # print(DataFrame(matrix))
-
-    def actuator_controls_0_0(self, ulgfile, closefig):
-        [csvname, x, y0, y1, y2, y3] = \
-            UlgParser.get_actuator_controls_0_0(ulgfile, self.tmpdir)
-        # x = UlgPlotMixer.timestamp_to_datetime(x)
-
-        [fig, ax_arr] = PlotUtils.create_fig_axes(4, 1)
-        fig.suptitle('Timeseries: actuator_controls_0_0')
-
-        xlabel = 'timestamp s'
-        y_arr = [y0, y1, y2, y3]
-        ylabel_arr = ['control[0]', 'control[1]', 'control[2]', 'control[3]']
-        PlotUtils.ax4_x1_y4(ax_arr, x, xlabel, y_arr, ylabel_arr)
-        ax_arr[0].set_ylim([-0.5, 0.5])
-        ax_arr[1].set_ylim([-0.5, 0.5])
-        ax_arr[2].set_ylim([-0.5, 0.5])
-        ax_arr[3].set_ylim([0, 1])
-        # ax1.tick_params(axis=u'y', which=u'both', length=0)
-
-        # rotates and right aligns the x labels, and moves the bottom of the
-        # axes up to make room for them
-        # fig.autofmt_xdate()
-
-        jpgfilename = JpgFilename.get_jpgfilename(
-            self.plotdir, ulgfile, csvname)
-        FigureUtils.savefig(jpgfilename, closefig)
-
-    def actuator_outputs_0(self, ulgfile, closefig):
-        [csvname, x, y0, y1, y2, y3, y4, y5, y6, y7] = \
-            UlgParser.get_actuator_outputs_0(ulgfile, self.tmpdir)
-        # x = UlgPlotMixer.timestamp_to_datetime(x)
-
-        [fig, ax_arr] = PlotUtils.create_fig_axes(1, 1)
-        fig.suptitle('Timeseries: actuator_outputs_0')
-
-        xlabel = 'timestamp s'
-        y_arr = [y0, y1, y2, y3, y4, y5, y6, y7]
-        ylabel = 'actuator_outputs_0'
-        PlotUtils.ax1_x1_y8(ax_arr, x, xlabel, y_arr, ylabel)
-        ax_arr[0].set_ylim([700, +2200])
-
-        jpgfilename = JpgFilename.get_jpgfilename(
-            self.plotdir, ulgfile, csvname + "_a")
-        FigureUtils.savefig(jpgfilename, closefig)
-
-        # Next figure
-
-        [fig, ax_arr] = PlotUtils.create_fig_axes(4, 1)
-        fig.suptitle('Timeseries: actuator_outputs_0')
-
-        xlabel = 'timestamp s'
-        y_arr = [y0, y1, y2, y3]
-        ylabel_arr = ['m1', 'm2', 'm3', 'm4']
-        PlotUtils.ax4_x1_y4(ax_arr, x, xlabel, y_arr, ylabel_arr)
-        ax_arr[0].set_ylim([700, +2200])
-        ax_arr[1].set_ylim([700, +2200])
-        ax_arr[2].set_ylim([700, +2200])
-        ax_arr[3].set_ylim([700, +2200])
-
-        y_arr = [y5, y4, y7, y6]
-        ylabel_arr = ['m1, m6', 'm2, m5', 'm3, m8', 'm4, m7']
-        PlotUtils.ax4_x1_y4(ax_arr, x, xlabel, y_arr, ylabel_arr)
-
-        jpgfilename = JpgFilename.get_jpgfilename(
-            self.plotdir, ulgfile, csvname + "_b")
-        FigureUtils.savefig(jpgfilename, closefig)
+    #
+    # def actuator_controls_0_0(self, ulgfile, closefig):
+    #     [csvname, x, y0, y1, y2, y3] = \
+    #         UlgParser.get_actuator_controls_0_0(ulgfile, self.tmpdir)
+    #     # x = UlgPlotMixer.timestamp_to_datetime(x)
+    #
+    #     [fig, ax_arr] = FigureUtils.create_fig_axes(4, 1)
+    #     fig.suptitle('Timeseries: actuator_controls_0_0')
+    #
+    #     xlabel = 'timestamp s'
+    #     y_arr = [y0, y1, y2, y3]
+    #     ylabel_arr = ['control[0]', 'control[1]', 'control[2]', 'control[3]']
+    #     PlotUtils.ax4_x1_y4(ax_arr, x, xlabel, y_arr, ylabel_arr)
+    #     ax_arr[0].set_ylim([-0.5, 0.5])
+    #     ax_arr[1].set_ylim([-0.5, 0.5])
+    #     ax_arr[2].set_ylim([-0.5, 0.5])
+    #     ax_arr[3].set_ylim([0, 1])
+    #     # ax1.tick_params(axis=u'y', which=u'both', length=0)
+    #
+    #     # rotates and right aligns the x labels, and moves the bottom of the
+    #     # axes up to make room for them
+    #     # fig.autofmt_xdate()
+    #
+    #     jpgfilename = self.get_jpgfilename(
+    #         self.plotdir, ulgfile, csvname)
+    #     FigureUtils.savefig(jpgfilename, closefig)
+    #
+    # def actuator_outputs_0(self, ulgfile, closefig):
+    #     [csvname, x, y0, y1, y2, y3, y4, y5, y6, y7] = \
+    #         UlgParser.get_actuator_outputs_0(ulgfile, self.tmpdir)
+    #     # x = UlgPlotMixer.timestamp_to_datetime(x)
+    #
+    #     [fig, ax_arr] = FigureUtils.create_fig_axes(1, 1)
+    #     fig.suptitle('Timeseries: actuator_outputs_0')
+    #
+    #     xlabel = 'timestamp s'
+    #     y_arr = [y0, y1, y2, y3, y4, y5, y6, y7]
+    #     ylabel = 'actuator_outputs_0'
+    #     PlotUtils.ax1_x1_y8(ax_arr, x, xlabel, y_arr, ylabel)
+    #     ax_arr[0].set_ylim([700, +2200])
+    #
+    #     jpgfilename = self.get_jpgfilename(
+    #         self.plotdir, ulgfile, csvname + "_a")
+    #     FigureUtils.savefig(jpgfilename, closefig)
+    #
+    #     # Next figure
+    #
+    #     [fig, ax_arr] = FigureUtils.create_fig_axes(4, 1)
+    #     fig.suptitle('Timeseries: actuator_outputs_0')
+    #
+    #     xlabel = 'timestamp s'
+    #     y_arr = [y0, y1, y2, y3]
+    #     ylabel_arr = ['m1', 'm2', 'm3', 'm4']
+    #     PlotUtils.ax4_x1_y4(ax_arr, x, xlabel, y_arr, ylabel_arr)
+    #     ax_arr[0].set_ylim([700, +2200])
+    #     ax_arr[1].set_ylim([700, +2200])
+    #     ax_arr[2].set_ylim([700, +2200])
+    #     ax_arr[3].set_ylim([700, +2200])
+    #
+    #     y_arr = [y5, y4, y7, y6]
+    #     ylabel_arr = ['m1, m6', 'm2, m5', 'm3, m8', 'm4, m7']
+    #     PlotUtils.ax4_x1_y4(ax_arr, x, xlabel, y_arr, ylabel_arr)
+    #
+    #     jpgfilename = self.get_jpgfilename(
+    #         self.plotdir, ulgfile, csvname + "_b")
+    #     FigureUtils.savefig(jpgfilename, closefig)
 
 
 if __name__ == '__main__':

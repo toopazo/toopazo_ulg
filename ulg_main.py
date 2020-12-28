@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 
-import argparse
-# import sys
-# import subprocess
-# import csv
-import matplotlib.pyplot as plt
-
 from tpylib_pkg.fileFolderUtils import FileFolderUtils
 # from tpylib_pkg.statistics import TimeseriesStats
 from ulg_parser import UlgParser
 from ulg_plot_basics import UlgPlotBasics
 from ulg_plot_sysid import UlgPlotSysid
 from ulg_plot_mixer import UlgPlotMixer
+
+import argparse
+# import sys
+# import subprocess
+# import csv
+# import matplotlib.pyplot as plt
 
 
 class UlgMain:
@@ -102,6 +102,16 @@ if __name__ == '__main__':
     ulgprocess = UlgMain(ulogdir, utmpdir, uplotdir)
     ulgprocess.process_logdir()
 
+    # 1) Go to folder
+    # /home/tzo4/Dropbox/tomas/pennState/avia/software/ulgPlotter
+    # 2) Activate venv
+    # source venv/bin/activate
+    # 3) Execute the script
+    # python ulg_main.py --bdir </absolute/path>
+
     # Copy past this command to run the code
     # python /home/tzo4/Dropbox/tomas/pennState/avia/software/ulgPlotter/
     # ulg_main.py --bdir .
+
+    # Or even better, run it as a package
+    # python -m tpylib_pkg.ulg_main --bdir .

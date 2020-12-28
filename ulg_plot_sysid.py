@@ -1,23 +1,22 @@
 #!/usr/bin/env python
 
-# from datetime import datetime, date, time
-# import matplotlib.pyplot as plt
-import numpy as np
-
 # from tpylib_pkg.fileFolderUtils import FileFolderUtils
 # from tpylib_pkg.statistics import TimeseriesStats
+from tpylib_pkg.matplotlibUtils import PlotUtils, FigureUtils
 from ulg_parser import UlgParser
 from ulg_plot_basics import UlgPlotBasics
-from ulg_plot_figures import UlgPlotFigures
+
+import numpy as np
 
 
 class UlgPlotSysid(UlgPlotBasics):
     def cmd_roll_to_attitude(self, ulgfile, closefig):
-        [fig, ax_arr] = UlgPlotFigures.create_fig_axes(5, 1)
+        [fig, ax_arr] = FigureUtils.create_fig_axes(5, 1)
         fig.suptitle('sysID: closed loop, stabilized mode')
 
         [csvname, x, y0, y1, y2, y3] = \
             UlgParser.get_actuator_controls_0_0(ulgfile, self.tmpdir)
+        _ = [csvname, y1, y2, y3]
 
         ax_arr[0].grid(True)
         ax_arr[0].plot(x, y0)
@@ -28,6 +27,7 @@ class UlgPlotSysid(UlgPlotBasics):
 
         [csvname, x, y0, y1, y2] = \
             UlgParser.get_vehicle_attitude_0_deg(ulgfile, self.tmpdir)
+        _ = csvname
 
         ax_arr[1].grid(True)
         ax_arr[1].plot(x, y0)
@@ -52,6 +52,7 @@ class UlgPlotSysid(UlgPlotBasics):
 
         [csvname, x, y0, y1, y2, y3, y4, y5, y6, y7, y8] = \
             UlgParser.get_vehicle_local_position_0(ulgfile, self.tmpdir)
+        _ = [csvname, y0, y1, y2, y3, y4, y5, y6, y7]
 
         ax_arr[4].grid(True)
         ax_arr[4].plot(x, y8)
@@ -61,16 +62,17 @@ class UlgPlotSysid(UlgPlotBasics):
         ax_arr[4].set_ylim([-5, 5])
 
         csvname = "sysid_roll"
-        jpgfilename = UlgPlotFigures.get_jpgfilename(
+        jpgfilename = self.get_jpgfilename(
             self.plotdir, ulgfile, csvname)
-        UlgPlotFigures.savefig(jpgfilename, closefig)
+        FigureUtils.savefig(jpgfilename, closefig)
 
     def cmd_pitch_to_attitude(self, ulgfile, closefig):
-        [fig, ax_arr] = UlgPlotFigures.create_fig_axes(5, 1)
+        [fig, ax_arr] = FigureUtils.create_fig_axes(5, 1)
         fig.suptitle('sysID: closed loop, stabilized mode')
 
         [csvname, x, y0, y1, y2, y3] = \
             UlgParser.get_actuator_controls_0_0(ulgfile, self.tmpdir)
+        _ = [csvname, y0, y2, y3]
 
         ax_arr[0].grid(True)
         ax_arr[0].plot(x, y1)
@@ -81,6 +83,7 @@ class UlgPlotSysid(UlgPlotBasics):
 
         [csvname, x, y0, y1, y2] = \
             UlgParser.get_vehicle_attitude_0_deg(ulgfile, self.tmpdir)
+        _ = csvname
 
         ax_arr[1].grid(True)
         ax_arr[1].plot(x, y0)
@@ -105,6 +108,7 @@ class UlgPlotSysid(UlgPlotBasics):
 
         [csvname, x, y0, y1, y2, y3, y4, y5, y6, y7, y8] = \
             UlgParser.get_vehicle_local_position_0(ulgfile, self.tmpdir)
+        _ [csvname, y0, y1, y2, y3, y4, y5, y6, y7]
 
         ax_arr[4].grid(True)
         ax_arr[4].plot(x, y8)
@@ -114,16 +118,17 @@ class UlgPlotSysid(UlgPlotBasics):
         ax_arr[4].set_ylim([-5, 5])
 
         csvname = "sysid_pitch"
-        jpgfilename = UlgPlotFigures.get_jpgfilename(
+        jpgfilename = self.get_jpgfilename(
             self.plotdir, ulgfile, csvname)
-        UlgPlotFigures.savefig(jpgfilename, closefig)
+        FigureUtils.savefig(jpgfilename, closefig)
 
     def cmd_yawrate_to_attitude(self, ulgfile, closefig):
-        [fig, ax_arr] = UlgPlotFigures.create_fig_axes(5, 1)
+        [fig, ax_arr] = FigureUtils.create_fig_axes(5, 1)
         fig.suptitle('sysID: closed loop, stabilized mode')
 
         [csvname, x, y0, y1, y2, y3] = \
             UlgParser.get_actuator_controls_0_0(ulgfile, self.tmpdir)
+        _ =[csvname, y0, y1, y3]
 
         ax_arr[0].grid(True)
         ax_arr[0].plot(x, y2)
@@ -134,6 +139,7 @@ class UlgPlotSysid(UlgPlotBasics):
 
         [csvname, x, y0, y1, y2] = \
             UlgParser.get_vehicle_attitude_0_deg(ulgfile, self.tmpdir)
+        _ = csvname
 
         ax_arr[1].grid(True)
         ax_arr[1].plot(x, y0)
@@ -158,6 +164,7 @@ class UlgPlotSysid(UlgPlotBasics):
 
         [csvname, x, y0, y1, y2, y3, y4, y5, y6, y7, y8] = \
             UlgParser.get_vehicle_local_position_0(ulgfile, self.tmpdir)
+        _ = [csvname, y0, y1, y2, y3, y4, y5, y6, y7]
 
         ax_arr[4].grid(True)
         ax_arr[4].plot(x, y8)
@@ -167,16 +174,17 @@ class UlgPlotSysid(UlgPlotBasics):
         ax_arr[4].set_ylim([-5, 5])
 
         csvname = "sysid_yawrate"
-        jpgfilename = UlgPlotFigures.get_jpgfilename(
+        jpgfilename = self.get_jpgfilename(
             self.plotdir, ulgfile, csvname)
-        UlgPlotFigures.savefig(jpgfilename, closefig)
+        FigureUtils.savefig(jpgfilename, closefig)
 
     def cmd_az_to_attitude(self, ulgfile, closefig):
-        [fig, ax_arr] = UlgPlotFigures.create_fig_axes(5, 1)
+        [fig, ax_arr] = FigureUtils.create_fig_axes(5, 1)
         fig.suptitle('sysID: closed loop, stabilized mode')
 
         [csvname, x, y0, y1, y2, y3] = \
             UlgParser.get_actuator_controls_0_0(ulgfile, self.tmpdir)
+        _ = [csvname, y0, y1, y2]
 
         ax_arr[0].grid(True)
         ax_arr[0].plot(x, y3)
@@ -187,6 +195,7 @@ class UlgPlotSysid(UlgPlotBasics):
 
         [csvname, x, y0, y1, y2] = \
             UlgParser.get_vehicle_attitude_0_deg(ulgfile, self.tmpdir)
+        _ = csvname
 
         ax_arr[1].grid(True)
         ax_arr[1].plot(x, y0)
@@ -211,6 +220,7 @@ class UlgPlotSysid(UlgPlotBasics):
 
         [csvname, x, y0, y1, y2, y3, y4, y5, y6, y7, y8] = \
             UlgParser.get_vehicle_local_position_0(ulgfile, self.tmpdir)
+        _ = [csvname, y0, y1, y2, y3, y4, y5, y6, y7]
 
         ax_arr[4].grid(True)
         ax_arr[4].plot(x, y8)
@@ -220,9 +230,9 @@ class UlgPlotSysid(UlgPlotBasics):
         ax_arr[4].set_ylim([-10, 10])
 
         csvname = "sysid_az"
-        jpgfilename = UlgPlotFigures.get_jpgfilename(
+        jpgfilename = self.get_jpgfilename(
             self.plotdir, ulgfile, csvname)
-        UlgPlotFigures.savefig(jpgfilename, closefig)
+        FigureUtils.savefig(jpgfilename, closefig)
 
 
 if __name__ == '__main__':
