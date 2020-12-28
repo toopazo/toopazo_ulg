@@ -1,0 +1,7 @@
+timestamp,onboard_control_sensors_present,onboard_control_sensors_enabled,onboard_control_sensors_health,arspd_check_level,load_factor_ratio,nav_state,arming_state,hil_state,failsafe,system_type,system_id,component_id,is_rotary_wing,is_vtol,vtol_fw_permanent_stab,in_transition_mode,in_transition_to_fw,rc_signal_lost,rc_input_mode,data_link_lost,data_link_lost_counter,high_latency_data_link_lost,engine_failure,mission_failure,failure_detector_status,aspd_check_failing,aspd_fault_declared,aspd_use_inhibit,aspd_fail_rtl
+669268173,3080239,2162703,3080207,0.0,0.0,15,2,0,0,2,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+670270668,3080239,2162703,3080207,0.0,0.0,15,2,0,0,2,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+671278717,3080239,2162703,3080207,0.0,0.0,15,2,0,0,2,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+672280704,3080239,2162703,3080207,0.0,0.0,15,2,0,0,2,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+673290713,3080239,2162703,3080207,0.0,0.0,15,2,0,0,2,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+673446662,3080239,2162703,3080207,0.0,0.0,15,1,0,0,2,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

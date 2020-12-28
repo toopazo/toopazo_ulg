@@ -1,0 +1,66 @@
+[process_logdir] processing /home/tzo4/Dropbox/tomas/pennState/avia/software/ulgPlotter/cifer_logs/logs
+[run_method_on_folder] fpath /home/tzo4/Dropbox/tomas/pennState/avia/software/ulgPlotter/cifer_logs/logs 
+**********************************************************
+[run_method_on_folder] filepath /home/tzo4/Dropbox/tomas/pennState/avia/software/ulgPlotter/cifer_logs/logs/log_79_2019-5-30-13-59-36.ulg 
+[process_file] processing /home/tzo4/Dropbox/tomas/pennState/avia/software/ulgPlotter/cifer_logs/logs/log_79_2019-5-30-13-59-36.ulg
+
+        # UlgPlotMixer.least_square_fit(xvect, yvect)
+        #   xvect = [x0, x1, x2, x3]
+        #   yvect = [y0, y1, y2, y3, y4, y5, y6, y7]
+        #   It is assumed that xi and yj are arrays with nsamples
+        
+nsamples 2080, ninputs 4, noutputs 8
+lsq_phi.shape (16640, 40)
+lsq_pinv_phi.shape (40, 16640)
+lsq_xvect.shape (40,)
+lsq_xvect [-609.99911485  662.96474011  614.15981139 -670.52563083  668.41733545
+ -616.92238749 -664.49880187  608.20836335  646.58909498  629.61813476
+ -644.2212455  -630.81100578  631.54220127  645.81271001 -629.39320098
+ -646.17474381  913.17415777 -916.82623944  922.4065763  -901.8410431
+  909.76211097 -913.77753649  925.64991182 -906.1401144   930.24425412
+  982.58718029  913.74453714  969.24964428  928.61740085  984.02846839
+  915.13716056  967.67925348 1071.56459696 1045.94484249 1079.43719776
+ 1052.85234339 1072.07450547 1045.52255477 1079.04394838 1053.33455816]
+lsq_error 972.2213118564467
+lsq_matrix.shape (8, 4)
+lsq_matrix [[-609.99911485  646.58909498  913.17415777  930.24425412]
+ [ 662.96474011  629.61813476 -916.82623944  982.58718029]
+ [ 614.15981139 -644.2212455   922.4065763   913.74453714]
+ [-670.52563083 -630.81100578 -901.8410431   969.24964428]
+ [ 668.41733545  631.54220127  909.76211097  928.61740085]
+ [-616.92238749  645.81271001 -913.77753649  984.02846839]
+ [-664.49880187 -629.39320098  925.64991182  915.13716056]
+ [ 608.20836335 -646.17474381 -906.1401144   967.67925348]]
+lsq_bias [1071.56459696 1045.94484249 1079.43719776 1052.85234339 1072.07450547
+ 1045.52255477 1079.04394838 1053.33455816]
+
+
+ 
+[process_logdir] processing /home/tzo4/Dropbox/tomas/pennState/avia/software/ulgPlotter/cifer_logs/logs
+[run_method_on_folder] fpath /home/tzo4/Dropbox/tomas/pennState/avia/software/ulgPlotter/cifer_logs/logs 
+**********************************************************
+[run_method_on_folder] filepath /home/tzo4/Dropbox/tomas/pennState/avia/software/ulgPlotter/cifer_logs/logs/log_79_2019-5-30-13-59-36.ulg 
+[process_file] processing /home/tzo4/Dropbox/tomas/pennState/avia/software/ulgPlotter/cifer_logs/logs/log_79_2019-5-30-13-59-36.ulg
+
+        # UlgPlotMixer.least_square_fit(xvect, yvect)
+        #   xvect = [x0, x1, x2, x3]
+        #   yvect = [y0, y1, y2, y3, y4, y5, y6, y7]
+        #   It is assumed that xi and yj are arrays with nsamples
+        
+nsamples 2080, ninputs 4, noutputs 8
+lsq_phi.shape (16640, 40)
+lsq_pinv_phi.shape (40, 16640)
+lsq_xvect.shape (40,)
+lsq_error 1.9444426237128933
+lsq_matrix.shape (8, 4)
+lsq_matrix [[-1.21999823  1.29317819  1.82634832  1.86048851]
+ [ 1.32592948  1.25923627 -1.83365248  1.96517436]
+ [ 1.22831962 -1.28844249  1.84481315  1.82748907]
+ [-1.34105126 -1.26162201 -1.80368209  1.93849929]
+ [ 1.33683467  1.2630844   1.81952422  1.8572348 ]
+ [-1.23384477  1.29162542 -1.82755507  1.96805694]
+ [-1.3289976  -1.2587864   1.85129982  1.83027432]
+ [ 1.21641673 -1.29234949 -1.81228023  1.93535851]]
+lsq_bias [-0.85687081 -0.90811032 -0.8411256  -0.89429531 -0.85585099 -0.90895489
+ -0.8419121  -0.89333088]
+

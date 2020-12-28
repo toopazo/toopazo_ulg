@@ -1,7 +1,363 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c1b8ce5-1502-4742-a9f2-2e616adc27bd" name="Default" comment="" />
+    <list default="true" id="0c1b8ce5-1502-4742-a9f2-2e616adc27bd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ulg_plot_figures.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ulg_plot_mixer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ulg_plot_sysid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ulgPlotter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ulgPlotter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_75_2019-5-30-13-18-50.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_76_2019-5-30-13-36-20.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_77_2019-5-30-13-52-00.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_78_2019-5-30-13-53-56.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_79_2019-5-30-13-59-36.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_80_2019-5-30-14-23-02.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_81_2019-5-30-14-26-24.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_82_2019-5-30-14-32-48.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_83_2019-5-30-14-36-54.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_84_2019-5-30-14-41-30.ulg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_96_2018-5-24-08-50-46.px4log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_97_2018-5-24-09-02-36.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_97_2018-5-24-09-02-36.px4log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_98_2018-5-24-09-20-46.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_98_2018-5-24-09-20-46.px4log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_99_2018-5-24-09-33-14.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_99_2018-5-24-09-33-14.px4log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_75_2019-5-30-13-18-50_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_75_2019-5-30-13-18-50_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_75_2019-5-30-13-18-50_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_76_2019-5-30-13-36-20_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_76_2019-5-30-13-36-20_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_76_2019-5-30-13-36-20_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_77_2019-5-30-13-52-00_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_77_2019-5-30-13-52-00_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_77_2019-5-30-13-52-00_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_78_2019-5-30-13-53-56_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_78_2019-5-30-13-53-56_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_78_2019-5-30-13-53-56_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_79_2019-5-30-13-59-36_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_79_2019-5-30-13-59-36_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_79_2019-5-30-13-59-36_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_80_2019-5-30-14-23-02_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_80_2019-5-30-14-23-02_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_80_2019-5-30-14-23-02_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_81_2019-5-30-14-26-24_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_81_2019-5-30-14-26-24_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_81_2019-5-30-14-26-24_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_82_2019-5-30-14-32-48_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_82_2019-5-30-14-32-48_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_82_2019-5-30-14-32-48_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_83_2019-5-30-14-36-54_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_83_2019-5-30-14-36-54_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_83_2019-5-30-14-36-54_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_84_2019-5-30-14-41-30_actuator_outputs_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_84_2019-5-30-14-41-30_hover_nwindow_pos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots/log_84_2019-5-30-14-41-30_hover_nwindow_vel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_local_position_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_75_2019-5-30-13-18-50_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_76_2019-5-30-13-36-20_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_77_2019-5-30-13-52-00_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_78_2019-5-30-13-53-56_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_home_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_global_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_79_2019-5-30-13-59-36_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_home_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_global_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_80_2019-5-30-14-23-02_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_home_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_global_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_81_2019-5-30-14-26-24_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_home_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_global_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_82_2019-5-30-14-32-48_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_home_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_global_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_83_2019-5-30-14-36-54_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_actuator_controls_0_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_actuator_outputs_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_actuator_outputs_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_battery_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_battery_status_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_cpuload_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_ekf2_innovations_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_ekf2_timestamps_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_estimator_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_input_rc_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_manual_control_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_ping_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_rate_ctrl_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_safety_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_sensor_combined_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_sensor_preflight_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_sensor_selection_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_system_power_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_telemetry_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_air_data_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_attitude_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_attitude_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_gps_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_land_detected_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_local_position_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_magnetometer_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_rates_setpoint_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_status_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/log_84_2019-5-30-14-41-30_vehicle_status_flags_0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toopazo_statistics.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toopazo_ulgMain.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulg_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toopazo_ulgParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulg_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toopazo_ulgPlotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulg_plot_basics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toopazo_utilities.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,44 +370,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="toopazo_ulgMain.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgMain.py">
+      <file leaf-file-name="ulg_main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ulg_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+            <state relative-caret-position="242">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ulg_plot_mixer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ulg_plot_mixer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="238" column="23" selection-start-line="238" selection-start-column="23" selection-end-line="238" selection-end-column="23" />
               <folding>
-                <element signature="e#23#33#0" expanded="true" />
+                <element signature="e#23#69#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="toopazo_ulgPlotter.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgPlotter.py">
+      <file leaf-file-name="ulg_plot_basics.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="271" column="12" selection-start-line="271" selection-start-column="12" selection-end-line="271" selection-end-column="12" />
+            <state relative-caret-position="205">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
-                <element signature="e#61#106#0" expanded="true" />
+                <element signature="e#23#69#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="toopazo_utilities.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_utilities.py">
+      <file leaf-file-name="ulg_plot_figures.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ulg_plot_figures.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="117" column="17" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
+            <state relative-caret-position="285">
+              <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
+              <folding>
+                <element signature="e#23#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="toopazo_ulgParser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
+      <file leaf-file-name="ulg_parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ulg_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="258" column="8" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
+            <state relative-caret-position="1870">
+              <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
               <folding>
                 <element signature="e#23#40#0" expanded="true" />
               </folding>
@@ -70,39 +438,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.get_</find>
-      <find>filename</find>
-      <find>save_and_close(fi</find>
-      <find>save_and_close(fil</find>
-      <find>file(</find>
-      <find>save_and_close(fig, file</find>
-      <find>get_csvfile(</find>
-      <find>save_and_close</find>
-      <find>close(</find>
-      <find>csv_name</find>
-      <find>savecf_and_close</find>
-      <find>savecf_and_close(filename)</find>
-      <find>Timeseries</find>
-      <find>, False</find>
-      <find>savecf</find>
-      <find>get_cs</find>
-      <find>get_csvfile</find>
-      <find>plot_4subplots</find>
-      <find>file</find>
-      <find>pyu</find>
-      <find>pyul</find>
-      <find>x,</find>
-      <find>timestamp_to_datetime</find>
-      <find>UlgPlotter</find>
-      <find>ax4_x1_y4</find>
-      <find>%c</find>
-      <find>PlotToFig</find>
-      <find>ax1_x1_y4</find>
-      <find>plt.</find>
-      <find>fig.autofmt_xdate()</find>
+      <find>UlgPlotMixer.check_data1d</find>
+      <find>pinv</find>
+      <find>csvname</find>
+      <find>x</find>
+      <find>xvect</find>
+      <find>fig = plt.figure()</find>
+      <find>tvect</find>
+      <find>1</find>
+      <find>,  2</find>
+      <find>, 2</find>
+      <find>2.0000</find>
+      <find>1.4142</find>
+      <find>'outputs'</find>
+      <find>outputs</find>
+      <find>2d(</find>
+      <find>1000</find>
+      <find>900</find>
+      <find>config_lsq_fit</find>
+      <find>== '</find>
+      <find>check_data(y</find>
+      <find>check_data(</find>
+      <find>1.1</find>
+      <find>UlgPlotSysid</find>
+      <find>save</find>
+      <find>_bias</find>
+      <find>UlgPlotFigures</find>
+      <find>get_jpgfilename</find>
+      <find>UlgPlotFigures.get_jpgfilename</find>
+      <find>PlotUtils.savefig</find>
+      <find>ax1_x1_y2</find>
     </findStrings>
     <replaceStrings>
-      <replace>'std,</replace>
       <replace>xis = 'std</replace>
       <replace>_</replace>
       <replace>= std_arr</replace>
@@ -117,7 +484,26 @@
       <replace>savecf_and_close(jpgfile)</replace>
       <replace>csvname</replace>
       <replace>savecf(jpgfile, False)</replace>
+      <replace>(jpgfilename, close)</replace>
+      <replace>e, c</replace>
+      <replace>, self.tmpdir</replace>
+      <replace>gfile, clos</replace>
+      <replace>closefig</replace>
+      <replace>xlabel = 'timestamp s'</replace>
+      <replace># PlotToFig.auto_lims(</replace>
+      <replace>UlgPlotFigures.</replace>
+      <replace>+1</replace>
+      <replace>, +2</replace>
+      <replace>530</replace>
+      <replace>'output'</replace>
+      <replace>750</replace>
+      <replace>UlgPlotBasics</replace>
+      <replace>JpgFilename.get_jpgfilename</replace>
+      <replace>FigureUtils.savefig</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -126,28 +512,53 @@
         <option value="$PROJECT_DIR$/ss2_utilities.py" />
         <option value="$PROJECT_DIR$/parse_ulg_file.py" />
         <option value="$PROJECT_DIR$/toopazo_statistics.py" />
-        <option value="$PROJECT_DIR$/toopazo_utilities.py" />
         <option value="$PROJECT_DIR$/toopazo_ulgPlots.py" />
         <option value="$PROJECT_DIR$/toopazo_ulgPlot.py" />
         <option value="$PROJECT_DIR$/px4_csv.py" />
         <option value="$PROJECT_DIR$/toopazo_ulgProcess.py" />
+        <option value="$PROJECT_DIR$/toopazo_utilities.py" />
+        <option value="$PROJECT_DIR$/toopazo_ulgParser.py" />
         <option value="$PROJECT_DIR$/toopazo_ulgParser.py" />
         <option value="$PROJECT_DIR$/toopazo_ulgMain.py" />
+        <option value="$PROJECT_DIR$/toopazo_ulgMain.py" />
         <option value="$PROJECT_DIR$/toopazo_ulgPlotter.py" />
-        <option value="$PROJECT_DIR$/../ulgPlotter/toopazo_ulgPlotter.py" />
+        <option value="$PROJECT_DIR$/toopazo_ulgPlotter.py" />
+        <option value="$PROJECT_DIR$/ulgp_main.py" />
+        <option value="$PROJECT_DIR$/ulg_plot_handlers.py" />
+        <option value="$PROJECT_DIR$/ulg_plotter.py" />
+        <option value="$PROJECT_DIR$/ulg_plot_sysid.py" />
+        <option value="$PROJECT_DIR$/ulg_main_sysid.py" />
+        <option value="$PROJECT_DIR$/ulg_main_basics.py" />
+        <option value="$PROJECT_DIR$/ulg_plot_basics.py" />
+        <option value="$PROJECT_DIR$/ulg_parser.py" />
+        <option value="$PROJECT_DIR$/ulg_main.py" />
+        <option value="$PROJECT_DIR$/ulg_plot_figures.py" />
+        <option value="$PROJECT_DIR$/ulg_plot_mixer.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="-4" />
-    <option name="width" value="1680" />
-    <option name="height" value="1054" />
+    <option name="x" value="297" />
+    <option name="y" value="1046" />
+    <option name="width" value="1383" />
+    <option name="height" value="814" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Default">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="ulgPlotter" type="cbb8eebc:String" user="ulgPlotter" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,11 +570,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../static_zeroSet/experimental_sol/arduino_rpm_current/arduSensors" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -198,384 +608,186 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="-11" width="1305" height="780" extended-state="6" />
+    <frame x="297" y="1046" width="1383" height="814" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49380806" visible="true" weight="0.20337683" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49380806" visible="true" weight="0.230658" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32972136" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.50619197" side_tool="true" weight="0.20337683" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2494244" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32972136" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgMain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
-          <folding>
-            <element signature="e#23#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgPlotter.py">
+    <entry file="file://$PROJECT_DIR$/ulg_main_sysid.py" />
+    <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4950">
           <caret line="225" column="39" selection-start-line="225" selection-start-column="39" selection-end-line="225" selection-end-column="39" />
-          <folding>
-            <element signature="e#61#106#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_utilities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2332">
-          <caret line="117" column="17" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
+    <entry file="file://$PROJECT_DIR$/toopazo_utilities.py" />
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2222">
           <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgMain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
-          <folding>
-            <element signature="e#23#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
+    <entry file="file://$PROJECT_DIR$/ulg_main_sysid.py" />
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5214">
           <caret line="237" column="31" selection-start-line="237" selection-start-column="31" selection-end-line="237" selection-end-column="31" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgPlotter.py">
+    <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5896">
           <caret line="268" column="32" lean-forward="true" selection-start-line="268" selection-start-column="32" selection-end-line="268" selection-end-column="32" />
-          <folding>
-            <element signature="e#61#106#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgMain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="e#23#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgPlotter.py">
+    <entry file="file://$PROJECT_DIR$/ulg_main_sysid.py" />
+    <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4136">
           <caret line="188" column="8" selection-start-line="188" selection-start-column="8" selection-end-line="188" selection-end-column="8" />
-          <folding>
-            <element signature="e#61#106#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5126">
           <caret line="237" column="31" lean-forward="true" selection-start-line="237" selection-start-column="31" selection-end-line="237" selection-end-column="31" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgMain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
-          <folding>
-            <element signature="e#23#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgPlotter.py">
+    <entry file="file://$PROJECT_DIR$/ulg_main_sysid.py" />
+    <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8030">
           <caret line="369" column="29" selection-start-line="369" selection-start-column="29" selection-end-line="369" selection-end-column="29" />
-          <folding>
-            <element signature="e#61#106#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
           <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgMain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
-          <folding>
-            <element signature="e#23#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgPlotter.py">
+    <entry file="file://$PROJECT_DIR$/ulg_main_sysid.py" />
+    <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8118">
           <caret line="369" column="29" lean-forward="true" selection-start-line="369" selection-start-column="29" selection-end-line="369" selection-end-column="29" />
-          <folding>
-            <element signature="e#61#106#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
           <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgMain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-          <folding>
-            <element signature="e#23#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
+    <entry file="file://$PROJECT_DIR$/ulg_main_sysid.py" />
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2530">
           <caret line="118" column="31" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="31" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_statistics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_utilities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4092">
-          <caret line="197" selection-start-line="197" selection-end-line="197" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgPlotter.py">
+    <entry file="file://$PROJECT_DIR$/toopazo_statistics.py" />
+    <entry file="file://$PROJECT_DIR$/toopazo_utilities.py" />
+    <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2552">
           <caret line="120" column="36" lean-forward="true" selection-start-line="120" selection-start-column="36" selection-end-line="120" selection-end-column="36" />
-          <folding>
-            <element signature="e#61#106#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_utilities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3784">
-          <caret line="183" column="35" selection-start-line="183" selection-start-column="35" selection-end-line="183" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/June 26th data (1).ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/June 26th data.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
+    <entry file="file://$PROJECT_DIR$/toopazo_utilities.py" />
+    <entry file="file://$PROJECT_DIR$/June 26th data (1).ipynb" />
+    <entry file="file://$PROJECT_DIR$/June 26th data.ipynb" />
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/June 26th data (1).ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/June 26th data.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
+    <entry file="file://$PROJECT_DIR$/June 26th data (1).ipynb" />
+    <entry file="file://$PROJECT_DIR$/June 26th data.ipynb" />
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/June 26th data (1).ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
+    <entry file="file://$PROJECT_DIR$/June 26th data (1).ipynb" />
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/June 26th data.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/June 26th data (1).ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
+    <entry file="file://$PROJECT_DIR$/June 26th data.ipynb" />
+    <entry file="file://$PROJECT_DIR$/June 26th data (1).ipynb" />
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-          <folding>
-            <element signature="e#23#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/June 26th data.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/June 26th data.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/June 26th data (1).ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/px4_csv.py">
+    <entry file="file://$PROJECT_DIR$/June 26th data.ipynb" />
+    <entry file="file://$PROJECT_DIR$/June 26th data.ipynb" />
+    <entry file="file://$PROJECT_DIR$/June 26th data (1).ipynb" />
+    <entry file="file://$PROJECT_DIR$/px4_csv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_statistics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgMain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="e#23#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/toopazo_statistics.py" />
+    <entry file="file://$PROJECT_DIR$/ulg_main_sysid.py" />
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -583,39 +795,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_utilities.py">
+    <entry file="file://$PROJECT_DIR$/toopazo_utilities.py" />
+    <entry file="file://$PROJECT_DIR$/ulg_main_sysid.py" />
+    <entry file="file://$PROJECT_DIR$/ulg_plot_sysid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="117" column="17" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
+        <state relative-caret-position="110">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgMain.py">
+    <entry file="file://$PROJECT_DIR$/ulg_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-          <folding>
-            <element signature="e#23#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="258" column="8" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
+        <state relative-caret-position="1870">
+          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
           <folding>
             <element signature="e#23#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ulgPlotter/toopazo_ulgPlotter.py">
+    <entry file="file://$PROJECT_DIR$/ulg_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="271" column="12" selection-start-line="271" selection-start-column="12" selection-end-line="271" selection-end-column="12" />
+        <state relative-caret-position="242">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulg_plot_basics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#61#106#0" expanded="true" />
+            <element signature="e#23#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulg_plot_figures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
+          <folding>
+            <element signature="e#23#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mixer_and_least_square_fit.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tpylib_pkg/matplotlibUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="e#23#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulg_plot_mixer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="238" column="23" selection-start-line="238" selection-start-column="23" selection-end-line="238" selection-end-column="23" />
+          <folding>
+            <element signature="e#23#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
