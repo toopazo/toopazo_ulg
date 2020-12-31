@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/tzo4/Dropbox/tomas/pennState/avia/software/ulgPlotter/venv"
+set -gx VIRTUAL_ENV "/home/tzo4/Dropbox/tomas/pennState/avia/software/toopazo_ulg/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
