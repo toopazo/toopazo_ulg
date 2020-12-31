@@ -1,5 +1,5 @@
-# UlgPlotter
-This is a simple Python program that makes use pyulog commands
+# toopazo_ulg
+Simple Python package that makes use pyulog commands
 (see https://github.com/PX4/pyulog ) to: parse, process and plot
 Px4 .ulg log files ( see https://github.com/PX4/Firmware )
 
@@ -13,5 +13,5 @@ It finally writes all results in the plots folder.
 ```
 user@host: ls
 logs tmp plots
-user@host: python3 ulg_main.py --bdir .
+user@host: python -m tulg.plot_main.py --bdir .
 ```
