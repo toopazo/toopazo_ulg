@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from toopazo_tools.fileFolderTools import FileFolderTools
+from toopazo_tools.file_folder import FileFolderTools
 
 import subprocess
 import csv
@@ -82,7 +82,7 @@ class UlgParser:
 
     @staticmethod
     def get_csvfile(tmpdir, ulgfile, csvname):
-        ulgfile = FileFolderTools.get_basename(ulgfile)
+        ulgfile = FileFolderTools.get_file_basename(ulgfile)
         csvfile = ulgfile.replace('.ulg', '_') + csvname + '.csv'
         csvfile = tmpdir + '/' + csvfile
         # print('[get_csvfile] csvfile %s' % csvfile)
@@ -97,9 +97,9 @@ class UlgParser:
         # csvname = 'actuator_controls_0_0'
         csvfile = UlgParser.get_csvfile(tmpdir, ulgfile, csvname)
         # print('[parse_csv] ulgfile %s' %
-        #       FileFolderTools.get_basename(ulgfile))
+        #       FileFolderTools.get_file_basename(ulgfile))
         # print('[parse_csv] csvfile %s' %
-        #       FileFolderTools.get_basename(csvfile))
+        #       FileFolderTools.get_file_basename(csvfile))
         csv_fd = open(csvfile)
 
         reader = csv.DictReader(csv_fd)
@@ -250,6 +250,8 @@ class UlgParser:
 
         x = csvd['timestamp']
 
+        status = csvd['status']
+
         c0 = csvd['controls[0]']
         c1 = csvd['controls[1]']
         c2 = csvd['controls[2]']
@@ -276,7 +278,7 @@ class UlgParser:
         p7 = csvd['pwm_limited[7]']
         pwm_limited = [p0, p1, p2, p3, p4, p5, p6, p7]
 
-        return [csvname, x, controls, output, pwm_limited]
+        return [csvname, x, status, controls, output, pwm_limited]
 
     @staticmethod
     def get_actuator_controls_0_0(ulgfile, tmpdir):

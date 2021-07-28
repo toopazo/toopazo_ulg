@@ -3,7 +3,6 @@ setup.py
 toopazo_ulg/__init__.py
 toopazo_ulg/file_parser.py
 toopazo_ulg/plot_basics.py
-toopazo_ulg/plot_figures.py
 toopazo_ulg/plot_main.py
 toopazo_ulg/plot_mixer.py
 toopazo_ulg/plot_sysid.py

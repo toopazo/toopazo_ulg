@@ -2,8 +2,7 @@
 
 # from toopazo_tools.fileFolderTools import FileFolderTools
 # from toopazo_tools.statistics import TimeseriesStats
-from toopazo_tools.matplotlibTools import PlotTools
-from toopazo_tools.matplotlibTools import FigureTools
+from toopazo_tools.matplotlib import PlotTools, FigureTools
 
 from toopazo_ulg.file_parser import UlgParser
 from toopazo_ulg.plot_basics import UlgPlotBasics
@@ -152,9 +151,9 @@ class UlgPlotMixer(UlgPlotBasics):
             return [lsq_matrix, lsq_bias]
 
     def mixer_input_output(self, ulgfile, closefig):
-        [csvname, x, controls, output, pwm_limited] = \
+        [csvname, x, status, controls, output, pwm_limited] = \
             UlgParser.get_toopazo_ctrlalloc_0(ulgfile, self.tmpdir)
-        # x = UlgPlotMixer.timestamp_to_datetime(x)
+        _ = status
 
         config_lsq_fit = False
         # config_lsq_fit = True

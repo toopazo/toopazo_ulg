@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from toopazo_tools.fileFolderTools import FileFolderTools
+from toopazo_tools.file_folder import FileFolderTools
 
 # import sys
 import argparse
@@ -15,7 +15,7 @@ class Process:
 
     def process_file(self, pfile):
         dirname = os.path.dirname(pfile)
-        basename = FileFolderTools.get_basename(pfile)
+        basename = FileFolderTools.get_file_basename(pfile)
         print('[%s] processing %s' % (self.process_file.__name__, pfile))
         assert isinstance(basename, str)
         nbasename = basename.replace('0.0', '0p0')

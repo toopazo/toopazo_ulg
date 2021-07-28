@@ -3,7 +3,7 @@
 # from toopazo_tools.fileFolderTools import FileFolderTools
 # from toopazo_tools.statistics import TimeseriesStats
 # from toopazo_tools.matplotlibTools import PlotTools
-from toopazo_tools.matplotlibTools import FigureTools
+from toopazo_tools.matplotlib import FigureTools
 
 from toopazo_ulg.file_parser import UlgParser
 from toopazo_ulg.plot_basics import UlgPlotBasics

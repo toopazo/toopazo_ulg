@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 
-from toopazo_tools.fileFolderTools import FileFolderTools
-from toopazo_tools.statistics import TimeseriesStats
-from toopazo_tools.matplotlibTools import PlotTools
-from toopazo_tools.matplotlibTools import FigureTools
+from toopazo_tools.file_folder import FileFolderTools
+from toopazo_tools.time_series import TimeseriesTools
+from toopazo_tools.matplotlib import PlotTools, FigureTools
 
 from toopazo_ulg.file_parser import UlgParser
 
@@ -19,7 +18,7 @@ class UlgPlotBasics:
 
     @staticmethod
     def get_jpgfilename(fpath, ulgfile, csvname):
-        ulgfile = FileFolderTools.get_basename(ulgfile)
+        ulgfile = FileFolderTools.get_file_basename(ulgfile)
         filename = ulgfile.replace('.ulg', '_') + csvname + '.jpg'
         filename = fpath + '/' + filename
         return filename
@@ -152,11 +151,11 @@ class UlgPlotBasics:
         [fig, ax_arr] = FigureTools.create_fig_axes(4, 1)
         fig.suptitle('Timeseries: actuator_controls_0_0')
 
-        xlabel = 'timestamp s'
+        xlabel_arr = ['timestamp s']
         x_arr = [x]
         y_arr = [y0, y1, y2, y3]
         ylabel_arr = ['control[0]', 'control[1]', 'control[2]', 'control[3]']
-        PlotTools.ax4_x1_y4(ax_arr, x_arr, xlabel, y_arr, ylabel_arr)
+        PlotTools.ax4_x1_y4(ax_arr, x_arr, xlabel_arr, y_arr, ylabel_arr)
         ax_arr[0].set_ylim([-0.1, 0.1])
         ax_arr[1].set_ylim([-0.1, 0.1])
         ax_arr[2].set_ylim([-0.1, 0.1])
@@ -179,11 +178,11 @@ class UlgPlotBasics:
         [fig, ax_arr] = FigureTools.create_fig_axes(1, 1)
         fig.suptitle('Timeseries: actuator_outputs_0')
 
-        xlabel = 'timestamp s'
+        xlabel_arr = ['timestamp s']
         x_arr = [x]
         y_arr = [y0, y1, y2, y3, y4, y5, y6, y7]
         ylabel = 'actuator_outputs_0'
-        PlotTools.ax1_x1_y8(ax_arr, x_arr, xlabel, y_arr, ylabel)
+        PlotTools.ax1_x1_y8(ax_arr, x_arr, xlabel_arr, y_arr, ylabel)
         # ax.set_ylim([700, 2200])
 
         jpgfilename = self.get_jpgfilename(
@@ -194,21 +193,21 @@ class UlgPlotBasics:
 
         [fig, ax_arr] = FigureTools.create_fig_axes(4, 1)
         fig.suptitle('Timeseries: actuator_outputs_0')
-        xlabel = 'timestamp s'
+        xlabel_arr = ['timestamp s']
 
-        y_arr = [y0, y1, y2, y3]
-        x_arr = [x]
-        ylabel_arr = ['m1', 'm2', 'm3', 'm4']
-        PlotTools.ax4_x1_y4(ax_arr, x_arr, xlabel, y_arr, ylabel_arr)
-        # ax0.set_ylim([700, 2200])
-        # ax1.set_ylim([700, 2200])
-        # ax2.set_ylim([700, 2200])
-        # ax3.set_ylim([700, 2200])
+        # y_arr = [y0, y1, y2, y3]
+        # x_arr = [x]
+        # ylabel_arr = ['m1', 'm2', 'm3', 'm4']
+        # PlotTools.ax4_x1_y4(ax_arr, x_arr, xlabel_arr, y_arr, ylabel_arr)
+        # # ax0.set_ylim([700, 2200])
+        # # ax1.set_ylim([700, 2200])
+        # # ax2.set_ylim([700, 2200])
+        # # ax3.set_ylim([700, 2200])
 
-        y_arr = [y5, y4, y7, y6]
+        y_arr = [y0, y1, y2, y3, y5, y4, y7, y6]
         x_arr = [x]
         ylabel_arr = ['m1, m6', 'm2, m5', 'm3, m8', 'm4, m7']
-        PlotTools.ax4_x1_y4(ax_arr, x_arr, xlabel, y_arr, ylabel_arr)
+        PlotTools.ax4_x1_y8(ax_arr, x_arr, xlabel_arr, y_arr, ylabel_arr)
 
         # rotates and right aligns the x labels, and moves the bottom of the
         # axes up to make room for them
@@ -235,9 +234,9 @@ class UlgPlotBasics:
         nmax = len(y0) - 1
         ilast = nmax - window + 1
         x_window = x[0:ilast+1]
-        y0_window = TimeseriesStats.apply_to_window(y0, np.std, window)
-        y1_window = TimeseriesStats.apply_to_window(y1, np.std, window)
-        y2_window = TimeseriesStats.apply_to_window(y2, np.std, window)
+        y0_window = TimeseriesTools.apply_to_window(y0, np.std, window)
+        y1_window = TimeseriesTools.apply_to_window(y1, np.std, window)
+        y2_window = TimeseriesTools.apply_to_window(y2, np.std, window)
         y3_window = np.add(y0_window, y1_window, y2_window)
 
         argmin_y3_window = int(np.argmin(y3_window))
@@ -249,37 +248,37 @@ class UlgPlotBasics:
               (window, round(min_y3_window, 2), round(min_x, 2))
         fig.suptitle(arg)
 
-        xlabel = 'timestamp s'
+        xlabel_arr = ['timestamp s']
         x_arr = [x]
         y_arr = [y0, y1, y2]
-        ylabel = 'x, y, z'
-        PlotTools.ax1_x1_y3([ax_arr[0]], x_arr, xlabel, y_arr, ylabel)
+        ylabel_arr = ['x, y, z']
+        PlotTools.ax1_x1_y3([ax_arr[0]], x_arr, xlabel_arr, y_arr, ylabel_arr)
 
-        xlabel = 'timestamp s'
+        xlabel_arr = ['timestamp s']
         x_arr = [x_window]
         y_arr = [y0_window, y1_window, y2_window, y3_window]
-        ylabel = 'std window'
-        PlotTools.ax1_x1_y4([ax_arr[1]], x_arr, xlabel, y_arr, ylabel)
+        ylabel_arr = ['std window']
+        PlotTools.ax1_x1_y4([ax_arr[1]], x_arr, xlabel_arr, y_arr, ylabel_arr)
 
         i0 = argmin_y3_window
         il = argmin_y3_window + window
 
-        xlabel = 'timestamp s'
+        xlabel_arr = ['timestamp s']
         x_arr = [x[i0:il]]
         y_arr = [y0[i0:il], y1[i0:il], y2[i0:il]]
-        ylabel = 'x, y, z'
-        PlotTools.ax1_x1_y3([ax_arr[2]], x_arr, xlabel, y_arr, ylabel)
+        ylabel_arr = ['x, y, z']
+        PlotTools.ax1_x1_y3([ax_arr[2]], x_arr, xlabel_arr, y_arr, ylabel_arr)
 
         [csvname, x, y0, y1, y2, y3, y4, y5, y6, y7] = \
             UlgParser.get_actuator_outputs_0(ulgfile, self.tmpdir)
         _ = csvname
 
-        xlabel = 'timestamp s'
+        xlabel_arr = ['timestamp s']
         x_arr = [x[i0:il]]
         y_arr = [y0[i0:il], y1[i0:il], y2[i0:il], y3[i0:il],
                  y4[i0:il], y5[i0:il], y6[i0:il], y7[i0:il]]
-        ylabel = 'actuator_outputs_0'
-        PlotTools.ax1_x1_y8([ax_arr[3]], x_arr, xlabel, y_arr, ylabel)
+        ylabel_arr = ['actuator_outputs_0']
+        PlotTools.ax1_x1_y8([ax_arr[3]], x_arr, xlabel_arr, y_arr, ylabel_arr)
 
         csvname = 'hover_nwindow_pos'
         jpgfilename = self.get_jpgfilename(
@@ -305,9 +304,9 @@ class UlgPlotBasics:
         ilast = nmax - window + 1
         x_window = x[0:ilast+1]
         fcost = UlgPlotBasics.nwindow_fcost
-        y3_window = TimeseriesStats.apply_to_window(y3, fcost, window)
-        y4_window = TimeseriesStats.apply_to_window(y4, fcost, window)
-        y5_window = TimeseriesStats.apply_to_window(y5, fcost, window)
+        y3_window = TimeseriesTools.apply_to_window(y3, fcost, window)
+        y4_window = TimeseriesTools.apply_to_window(y4, fcost, window)
+        y5_window = TimeseriesTools.apply_to_window(y5, fcost, window)
         y6_window = np.add(y3_window, y4_window, y5_window)
 
         argmin_y6_window = int(np.argmin(y6_window))
@@ -319,37 +318,37 @@ class UlgPlotBasics:
               % (window, round(min_y6_window, 2), round(min_x, 2))
         fig.suptitle(arg)
 
-        xlabel = 'timestamp s'
+        xlabel_arr = ['timestamp s']
         x_arr = [x]
         y_arr = [y3, y4, y5]
-        ylabel = 'vx, vy, vz'
-        PlotTools.ax1_x1_y3([ax_arr[0]], x_arr, xlabel, y_arr, ylabel)
+        ylabel_arr = ['vx, vy, vz']
+        PlotTools.ax1_x1_y3([ax_arr[0]], x_arr, xlabel_arr, y_arr, ylabel_arr)
 
-        xlabel = 'timestamp s'
+        xlabel_arr = ['timestamp s']
         x_arr = [x_window]
         y_arr = [y3_window, y4_window, y5_window, y6_window]
-        ylabel = 'fcost'
-        PlotTools.ax1_x1_y4([ax_arr[1]], x_arr, xlabel, y_arr, ylabel)
+        ylabel_arr = ['fcost']
+        PlotTools.ax1_x1_y4([ax_arr[1]], x_arr, xlabel_arr, y_arr, ylabel_arr)
 
         i0 = argmin_y6_window
         il = argmin_y6_window + window
 
-        xlabel = 'timestamp s'
+        xlabel_arr = ['timestamp s']
         x_arr = [x[i0:il]]
         y_arr = [y3[i0:il], y4[i0:il], y5[i0:il]]
-        ylabel = 'vx, vy, vz'
-        PlotTools.ax1_x1_y3([ax_arr[2]], x_arr, xlabel, y_arr, ylabel)
+        ylabel_arr = ['vx, vy, vz']
+        PlotTools.ax1_x1_y3([ax_arr[2]], x_arr, xlabel_arr, y_arr, ylabel_arr)
 
         [csvname, x, y0, y1, y2, y3, y4, y5, y6, y7] = \
             UlgParser.get_actuator_outputs_0(ulgfile, self.tmpdir)
         _ = csvname
 
-        xlabel = 'timestamp s'
+        xlabel_arr = ['timestamp s']
         x_arr = [x[i0:il]]
         y_arr = [y0[i0:il], y1[i0:il], y2[i0:il], y3[i0:il],
                  y4[i0:il], y5[i0:il], y6[i0:il], y7[i0:il]]
-        ylabel = 'actuator variables'
-        PlotTools.ax1_x1_y8([ax_arr[3]], x_arr, xlabel, y_arr, ylabel)
+        ylabel_arr = ['actuator variables']
+        PlotTools.ax1_x1_y8([ax_arr[3]], x_arr, xlabel_arr, y_arr, ylabel_arr)
         txt = 'std green %s' % round(float(np.std(y0[i0:il])), 2)
         ax_arr[3].annotate(txt, xy=(0.05, 0.8), xycoords='axes fraction')
 

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: toopazo-ulg
-Version: 0.0.1
+Version: 0.0.8
 Summary: Python package to process and plot Px4 .ulg files
 Home-page: https://github.com/toopazo/toopazo_ulg
 Author: toopazo
@@ -11,7 +11,10 @@ Description: # toopazo_ulg
         (see https://github.com/PX4/pyulog ) to: parse, process and plot
         Px4 .ulg log files ( see https://github.com/PX4/Firmware )
         
-        
+        Important links
+        - https://packaging.python.org/tutorials/packaging-projects/
+        - https://pypi.org/
+        - https://pypi.org/project/toopazo-ulg/
         
         ## How it works
         It needs three folders: logs, tmp and plots (names are hardcoded).
@@ -20,12 +23,12 @@ Description: # toopazo_ulg
         It finally writes all results in the plots folder.
         
         ## Dependencies
-        Install running pip as a module
+        Install dependencies running pip as a module
         ```
-         python -m pip install -U toopazo_tools
-         python -m pip install -U matplotlib
-         python -m pip install -U numpy
-         python -m pip install -U scipy
+         python3 -m pip install -U matplotlib
+         python3 -m pip install -U numpy
+         python3 -m pip install -U scipy
+         python3 -m pip install -U toopazo_tools
         ```
         
         ## Usage

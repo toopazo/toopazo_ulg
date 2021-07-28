@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from toopazo_tools.fileFolderTools import FileFolderTools
+from toopazo_tools.file_folder import FileFolderTools
 # from toopazo_tools.statistics import TimeseriesStats
 
 from toopazo_ulg.file_parser import UlgParser
@@ -16,10 +16,11 @@ import argparse
 
 
 class UlgMain:
-    def __init__(self, logdir, tmpdir, plotdir):
-        self.logdir = logdir
-        self.tmpdir = tmpdir
-        self.plotdir = plotdir
+    def __init__(self, bdir):
+        # bdir = FileFolderTools.full_path(args.bdir)
+        self.logdir = bdir + '/logs'
+        self.tmpdir = bdir + '/tmp'
+        self.plotdir = bdir + '/plots'
 
         self.ulg_plot_basics = UlgPlotBasics(
             self.logdir, self.tmpdir, self.plotdir)
@@ -79,7 +80,7 @@ class UlgMain:
         print('[process_logdir] processing %s' % self.logdir)
 
         # foldername, extension, method
-        FileFolderTools.run_method_on_folder(ulogdir, '.ulg',
+        FileFolderTools.run_method_on_folder(self.logdir, '.ulg',
                                              ulgprocess.process_file)
 
 
@@ -90,20 +91,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='Parse, process and plot .ulg files')
     parser.add_argument('--bdir', action='store', required=True,
-                        help='Base directory of [logs, tmp, plots] folders ')
+                        help='Base directory of [logs, tmp, plots] folders')
     # parser.add_argument('--plot', action='store_true', required=False,
     #                     help='plot results')
     # parser.add_argument('--loc', action='store_true', help='location')
     args = parser.parse_args()
 
-    bdir = FileFolderTools.full_path(args.bdir)
-    # uplot = args.plot
-
-    ulogdir = bdir + '/logs'
-    utmpdir = bdir + '/tmp'
-    uplotdir = bdir + '/plots'
-
-    ulgprocess = UlgMain(ulogdir, utmpdir, uplotdir)
+    ubdir = FileFolderTools.full_path(args.bdir)
+    ulgprocess = UlgMain(ubdir)
     ulgprocess.process_logdir()
 
     # 1) Go to folder
