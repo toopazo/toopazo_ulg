@@ -1,14 +1,17 @@
 #!/usr/bin/env python
 
-# from toopazo_tools.fileFolderTools import FileFolderTools
-# from toopazo_tools.statistics import TimeseriesStats
-# from toopazo_tools.matplotlibTools import PlotTools
+import os
+import numpy as np
+
 from toopazo_tools.matplotlib import FigureTools
 
-from toopazo_ulg.file_parser import UlgParser
-from toopazo_ulg.plot_basics import UlgPlotBasics
-
-import numpy as np
+# Check if this is running inside toopazo_ulg/ or deployed as a module
+if os.path.isfile('file_parser.py'):
+    from file_parser import UlgParser
+    from plot_basics import UlgPlotBasics
+else:
+    from toopazo_ulg.file_parser import UlgParser
+    from toopazo_ulg.plot_basics import UlgPlotBasics
 
 
 class UlgPlotSysid(UlgPlotBasics):

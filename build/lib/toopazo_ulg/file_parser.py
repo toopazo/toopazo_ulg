@@ -6,6 +6,7 @@ import subprocess
 import csv
 import numpy as np
 import math
+import pandas as pd
 
 
 class UlgParser:
@@ -192,6 +193,14 @@ class UlgParser:
             p_arr.append(rpy[1] * rad2deg)
             y_arr.append(rpy[2] * rad2deg)
         return [r_arr, p_arr, y_arr]
+
+    @staticmethod
+    def get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, csvname):
+        ulgfile = FileFolderTools.get_file_basename(ulgfile)
+        csvfile = ulgfile.replace('.ulg', '_') + csvname + '.csv'
+        csvfile = tmpdir + '/' + csvfile
+        df = pd.read_csv(csvfile, sep=',', index_col='timestamp')
+        return df
 
     @staticmethod
     def get_vehicle_attitude_0(ulgfile, tmpdir):

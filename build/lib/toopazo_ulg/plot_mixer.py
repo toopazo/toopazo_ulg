@@ -1,14 +1,25 @@
 #!/usr/bin/env python
 
-# from toopazo_tools.fileFolderTools import FileFolderTools
-# from toopazo_tools.statistics import TimeseriesStats
-from toopazo_tools.matplotlib import PlotTools, FigureTools
-
-from toopazo_ulg.file_parser import UlgParser
-from toopazo_ulg.plot_basics import UlgPlotBasics
-
+import os
+import copy
+import pandas as pd
 import numpy as np
 import scipy.linalg as scipy_linalg
+import matplotlib.pyplot as plt
+# from scipy import signal
+# import pandas as pd
+# import datetime
+
+# from toopazo_tools.time_series import TimeseriesTools as TSTools
+from toopazo_tools.matplotlib import PlotTools, FigureTools
+
+# Check if this is running inside toopazo_ulg/ or deployed as a module
+if os.path.isfile('file_parser.py'):
+    from file_parser import UlgParser
+    from plot_basics import UlgPlotBasics, PandasTools
+else:
+    from toopazo_ulg.file_parser import UlgParser
+    from toopazo_ulg.plot_basics import UlgPlotBasics, PandasTools
 
 
 class UlgPlotMixer(UlgPlotBasics):
@@ -151,9 +162,9 @@ class UlgPlotMixer(UlgPlotBasics):
             return [lsq_matrix, lsq_bias]
 
     def mixer_input_output(self, ulgfile, closefig):
-        [csvname, x, status, controls, output, pwm_limited] = \
+        [csvname, x, controls, output, pwm_limited] = \
             UlgParser.get_toopazo_ctrlalloc_0(ulgfile, self.tmpdir)
-        _ = status
+        # x = UlgPlotMixer.timestamp_to_datetime(x)
 
         config_lsq_fit = False
         # config_lsq_fit = True
@@ -408,6 +419,115 @@ class UlgPlotMixer(UlgPlotBasics):
         print('[least_square_fit] lsq_bias =\n%s' % lsq_bias)
 
         return [lsq_matrix, lsq_bias, lsq_error]
+
+    def ctrl_alloc_model(self, ulgfile, twin):
+        tmpdir = self.tmpdir
+        ulgfile = ulgfile
+        pltname = 'actuator_controls_0_0'
+        df_in = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
+        df_in.rename(columns={"control[0]": "roll rate cmd", "control[1]": "pitch rate cmd",
+                              "control[2]": "yaw rate cmd", 'control[3]': "az cmd"},
+                     inplace=True)
+        df_in = PandasTools.convert_index_from_us_to_s(df_in)
+        df_in = PandasTools.apply_time_win(df_in, twin)
+        # print(df)
+
+        tmpdir = self.tmpdir
+        ulgfile = ulgfile
+        # pltname = 'actuator_outputs_0'
+        pltname = 'actuator_outputs_1'
+        df_out = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
+        df_out = PandasTools.convert_index_from_us_to_s(df_out)
+        df_out = PandasTools.apply_time_win(df_out, twin)
+        # print(df)
+
+        # PandasTools.resample(df_in, 'roll rate cmd', df_out, 'output[0]')
+        df_in = PandasTools.interpolate_df1_according_to_df2_index(df_in, df_out)
+
+        xvect = df_in[['roll rate cmd', 'pitch rate cmd', 'yaw rate cmd', 'az cmd']].values
+        yvect = df_out[['output[0]', 'output[1]', 'output[2]', 'output[3]',
+                       'output[4]', 'output[5]', 'output[6]', 'output[7]']].values
+
+        xvect = np.array(xvect).transpose()
+        yvect = np.array(yvect).transpose()
+        print(xvect.shape)
+        print(yvect.shape)
+
+        # Convert from [1000 2000] to [-1 +1]
+        # [1000 2000] - 1500 = [-500 +500]
+        # [-500 +500] / 500 = [-1 +1]
+        yvect = yvect - 1500
+        yvect = yvect / 500
+        [lsq_matrix, lsq_bias, lsq_error] = UlgPlotMixer.least_square_fit(xvect, yvect)
+        _ = lsq_error
+
+        self.ctrl_alloc_model_plot(ulgfile, df_out, xvect, yvect, lsq_matrix, lsq_bias)
+
+    def ctrl_alloc_model_plot(self, ulgfile, df_out, xvect, yvect, lsq_matrix, lsq_bias):
+        # real_in = []
+        real_out = []
+        estim_out = []
+        estim_error = []
+        # For each sample
+        for i in range(0, len(xvect[0, :])):
+            real_cmd = xvect[:, i]
+            real_throttle = yvect[:, i]
+            estim_throttle = np.matmul(lsq_matrix, real_cmd) + lsq_bias
+            estim_real_error = estim_throttle - real_throttle
+
+            # real_in.append(real_cmd)
+            real_out.append(real_throttle)
+            estim_out.append(estim_throttle)
+            estim_error.append(estim_real_error)
+        # real_in = np.array(real_in)
+        real_out = np.array(real_out)
+        estim_out = np.array(estim_out)
+        estim_error = np.array(estim_error)
+
+        df_lsq = copy.deepcopy(df_out)
+        assert isinstance(df_lsq, pd.DataFrame)
+        df_lsq.drop(columns=df_lsq.columns, inplace=True)
+        fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=self.figsize, sharex=True)
+
+        real_out_keys = []
+        estim_out_keys = []
+        estim_error_keys = []
+        # For each variable
+        for i in range(0, len(estim_error[0, :])):
+            key = f'real_out[{i}]'
+            df_lsq[key] = real_out[:, i]
+            real_out_keys.append(key)
+
+            key = f'estim_out[{i}]'
+            df_lsq[key] = estim_out[:, i]
+            estim_out_keys.append(key)
+
+            key = f'estim_error[{i}]'
+            df_lsq[key] = estim_error[:, i]
+            estim_error_keys.append(key)
+
+        df_lsq.plot(y=real_out_keys, ax=ax1, grid=True, legend=False)
+        df_lsq.plot(y=estim_out_keys, ax=ax2, grid=True, legend=False)
+        df_lsq.plot(y=estim_error_keys, ax=ax3, grid=True, legend=False)
+        # ax1.legend(loc='center left', bbox_to_anchor=(1.0, 0.5))
+        # ax2.legend(loc='center left', bbox_to_anchor=(1.0, 0.5))
+        # ax3.legend(loc='center left', bbox_to_anchor=(1.0, 0.5))
+
+        ax1.set_ylabel("Output")
+        ax1.set_xlabel("Time s")
+        ax1.set_ylim([-1, 1])
+        ax2.set_ylabel("Estimated output")
+        ax2.set_xlabel("Time s")
+        ax2.set_ylim([-1, 1])
+        ax3.set_ylabel("Estimation error")
+        ax3.set_xlabel("Time s")
+        # ax3.set_ylim([-1, 1])
+        ax3.set_ylim([-0.4, 0.4])
+
+        plt.subplots_adjust(wspace=0, hspace=0.1)
+        pltname = self.ctrl_alloc_model.__name__
+        jpgfilename = self.get_jpgfilename(self.plotdir, ulgfile, pltname)
+        UlgPlotBasics.save_fig(fig, jpgfilename)
 
     @staticmethod
     def print_2d_mtrix(matrix):
