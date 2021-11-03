@@ -2,8 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c1b8ce5-1502-4742-a9f2-2e616adc27bd" name="Default" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/increment_setup_version.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/increment_setup_version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/update_library.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/toopazo_ulg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/toopazo_ulg.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/toopazo_ulg/file_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/toopazo_ulg/file_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/toopazo_ulg/plot_basics.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/toopazo_ulg/plot_basics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/toopazo_ulg/plot_figures.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/toopazo_ulg/plot_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/toopazo_ulg/plot_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/toopazo_ulg/plot_mixer.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/toopazo_ulg/plot_mixer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/toopazo_ulg/plot_sysid.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/toopazo_ulg/plot_sysid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.1-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.1.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.2-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.2.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.3-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.3.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.4-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.4.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.5-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.5.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.6-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.6.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.7-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.7.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.8-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/toopazo_ulg-0.0.8.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toopazo_ulg.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/toopazo_ulg.egg-info/PKG-INFO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toopazo_ulg.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/toopazo_ulg.egg-info/SOURCES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toopazo_ulg/file_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/toopazo_ulg/file_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toopazo_ulg/plot_basics.py" beforeDir="false" afterPath="$PROJECT_DIR$/toopazo_ulg/plot_basics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toopazo_ulg/plot_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/toopazo_ulg/plot_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toopazo_ulg/plot_mixer.py" beforeDir="false" afterPath="$PROJECT_DIR$/toopazo_ulg/plot_mixer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toopazo_ulg/plot_sysid.py" beforeDir="false" afterPath="$PROJECT_DIR$/toopazo_ulg/plot_sysid.py" afterDir="false" />
+>>>>>>> 5b0e6993e267690316ac6d0e34aab87af2095e81
       <change beforePath="$PROJECT_DIR$/venv/bin/activate" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/bin/activate.csh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/bin/activate.fish" beforeDir="false" />
@@ -2343,6 +2383,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/toopazo_ulg/plot_sysid.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/toopazo_ulg/plot_mixer.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/toopazo_ulg/plot_main.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/toopazo_ulg/file_parser.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/toopazo_ulg/plot_basics.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -2454,12 +2509,12 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/tulg_pkg" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tulg_pkg" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

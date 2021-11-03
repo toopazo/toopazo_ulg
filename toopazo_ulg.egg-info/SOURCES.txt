@@ -1,3 +1,4 @@
+LICENSE
 README.md
 setup.py
 toopazo_ulg/__init__.py
