@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import argparse
@@ -11,19 +11,19 @@ from toopazo_tools.file_folder import FileFolderTools as FFTools
 # from toopazo_tools.statistics import TimeseriesStats
 
 # Check if this is running inside toopazo_ulg/ or deployed as a module
-if os.path.isfile('file_parser.py'):
-    from file_parser import UlgParser
+if os.path.isfile('parse_file.py'):
+    from parse_file import UlgParser
     from plot_basics import UlgPlotBasics
     from plot_sysid import UlgPlotSysid
     from plot_mixer import UlgPlotMixer
 else:
-    from toopazo_ulg.file_parser import UlgParser
+    from toopazo_ulg.parse_file import UlgParser
     from toopazo_ulg.plot_basics import UlgPlotBasics
     from toopazo_ulg.plot_sysid import UlgPlotSysid
     from toopazo_ulg.plot_mixer import UlgPlotMixer
 
 
-class UlgMain:
+class UlgPlot:
     def __init__(self, bdir, log_num, time_win,
                  pos_vel, rpy_angles, pqr_angvel, man_ctrl, ctrl_alloc):
         # bdir = FFTools.full_path(args.bdir)
@@ -39,7 +39,7 @@ class UlgMain:
             if not os.path.isdir(self.plotdir):
                 os.mkdir(self.logdir)
         except OSError:
-            raise RuntimeError('Directories are not present and could not be created')
+            raise RuntimeError('Directories are not present or could not be created')
 
         self.log_num = log_num
         self.time_win = time_win
@@ -77,7 +77,8 @@ class UlgMain:
 
     def process_file(self, ulgfile):
         if self.log_num is not None:
-            if self.log_num not in ulgfile:
+            pattern = f'_{self.log_num}_'
+            if pattern not in ulgfile:
                 return
 
         print('[process_file] Working on file %s' % ulgfile)
@@ -139,7 +140,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    ulg_data = UlgMain(
+    ulg_data = UlgPlot(
         os.path.abspath(args.bdir), args.log_num, args.time_win,
         args.pos_vel, args.rpy_angles, args.pqr_angvel, args.man_ctrl, args.ctrl_alloc
     )

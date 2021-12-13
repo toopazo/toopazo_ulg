@@ -12,14 +12,16 @@ import matplotlib.pyplot as plt
 
 # from toopazo_tools.time_series import TimeseriesTools as TSTools
 from toopazo_tools.matplotlib import PlotTools, FigureTools
+from toopazo_tools.pandas import PandasTools
+
 
 # Check if this is running inside toopazo_ulg/ or deployed as a module
-if os.path.isfile('file_parser.py'):
-    from file_parser import UlgParser
-    from plot_basics import UlgPlotBasics, PandasTools
+if os.path.isfile('parse_file.py'):
+    from parse_file import UlgParser
+    from plot_basics import UlgPlotBasics
 else:
-    from toopazo_ulg.file_parser import UlgParser
-    from toopazo_ulg.plot_basics import UlgPlotBasics, PandasTools
+    from toopazo_ulg.parse_file import UlgParser
+    from toopazo_ulg.plot_basics import UlgPlotBasics
 
 
 class UlgPlotMixer(UlgPlotBasics):
@@ -420,26 +422,8 @@ class UlgPlotMixer(UlgPlotBasics):
 
         return [lsq_matrix, lsq_bias, lsq_error]
 
-    def ctrl_alloc_model(self, ulgfile, twin):
-        tmpdir = self.tmpdir
-        ulgfile = ulgfile
-        pltname = 'actuator_controls_0_0'
-        df_in = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
-        df_in.rename(columns={"control[0]": "roll rate cmd", "control[1]": "pitch rate cmd",
-                              "control[2]": "yaw rate cmd", 'control[3]': "az cmd"},
-                     inplace=True)
-        df_in = PandasTools.convert_index_from_us_to_s(df_in)
-        df_in = PandasTools.apply_time_win(df_in, twin)
-        # print(df)
-
-        tmpdir = self.tmpdir
-        ulgfile = ulgfile
-        # pltname = 'actuator_outputs_0'
-        pltname = 'actuator_outputs_1'
-        df_out = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
-        df_out = PandasTools.convert_index_from_us_to_s(df_out)
-        df_out = PandasTools.apply_time_win(df_out, twin)
-        # print(df)
+    def ctrl_alloc_model(self, ulgfile, time_win):
+        [df_in, df_out] = UlgParser.get_pandas_dataframe_ctrl_alloc(self.tmpdir, ulgfile, time_win)
 
         # PandasTools.resample(df_in, 'roll rate cmd', df_out, 'output[0]')
         df_in = PandasTools.interpolate_df1_according_to_df2_index(df_in, df_out)

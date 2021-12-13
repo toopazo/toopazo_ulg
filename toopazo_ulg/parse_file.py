@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from toopazo_tools.file_folder import FileFolderTools
+from toopazo_tools.pandas import PandasTools
 
 import subprocess
 import csv
@@ -195,14 +196,6 @@ class UlgParser:
         return [r_arr, p_arr, y_arr]
 
     @staticmethod
-    def get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, csvname):
-        ulgfile = FileFolderTools.get_file_basename(ulgfile)
-        csvfile = ulgfile.replace('.ulg', '_') + csvname + '.csv'
-        csvfile = tmpdir + '/' + csvfile
-        df = pd.read_csv(csvfile, sep=',', index_col='timestamp')
-        return df
-
-    @staticmethod
     def get_vehicle_attitude_0(ulgfile, tmpdir):
         csvname = 'vehicle_attitude_0'
         csvd = UlgParser.parse_csv(ulgfile, csvname, tmpdir)
@@ -349,3 +342,92 @@ class UlgParser:
         y7 = csvd['output[7]']
 
         return [csvname, x, y0, y1, y2, y3, y4, y5, y6, y7]
+
+    @staticmethod
+    def get_pandas_dataframe(tmpdir, ulgfile, csvname):
+        ulgfile = FileFolderTools.get_file_basename(ulgfile)
+        csvfile = ulgfile.replace('.ulg', '_') + csvname + '.csv'
+        csvfile = tmpdir + '/' + csvfile
+        df = pd.read_csv(csvfile, sep=',', index_col='timestamp')
+        return df
+
+    @staticmethod
+    def get_pandas_dataframe_pos_vel(tmpdir, ulgfile, time_win):
+        csvname = 'vehicle_local_position_0'
+        df_pv = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        df_pv['vnorm'] = np.linalg.norm([df_pv['vx'].values, df_pv['vy'].values, df_pv['vz'].values], axis=0)
+        df_pv['pnorm'] = np.linalg.norm([df_pv['x'].values, df_pv['y'].values, df_pv['z'].values], axis=0)
+        df_pv = PandasTools.convert_index_from_us_to_s(df_pv)
+        df_pv = PandasTools.apply_time_win(df_pv, time_win)
+        return df_pv
+
+    @staticmethod
+    def get_pandas_dataframe_rpy_angles(tmpdir, ulgfile, time_win):
+        csvname = 'vehicle_attitude_0_deg'
+        df_att = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        df_att = PandasTools.convert_index_from_us_to_s(df_att)
+        df_att = PandasTools.apply_time_win(df_att, time_win)
+
+        csvname = 'vehicle_attitude_setpoint_0'
+        df_attsp = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        df_attsp['roll sp'] = df_attsp['roll_body'].values * 180 / np.pi
+        df_attsp['pitch sp'] = df_attsp['pitch_body'].values * 180 / np.pi
+        df_attsp['yaw sp'] = df_attsp['yaw_body'].values * 180 / np.pi
+        df_attsp = PandasTools.convert_index_from_us_to_s(df_attsp)
+        df_attsp = PandasTools.apply_time_win(df_attsp, time_win)
+
+        return [df_att, df_attsp]
+
+    @staticmethod
+    def get_pandas_dataframe_pqr_angvel(tmpdir, ulgfile, time_win):
+        csvname = 'vehicle_angular_velocity_0'
+        df_angvel = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        df_angvel['roll rate'] = df_angvel['xyz[0]'].values * 180 / np.pi
+        df_angvel['pitch rate'] = df_angvel['xyz[1]'].values * 180 / np.pi
+        df_angvel['yaw rate'] = df_angvel['xyz[2]'].values * 180 / np.pi
+        df_angvel = PandasTools.convert_index_from_us_to_s(df_angvel)
+        df_angvel = PandasTools.apply_time_win(df_angvel, time_win)
+
+        csvname = 'vehicle_rates_setpoint_0'
+        df_angvelsp = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        df_angvelsp['roll rate sp'] = df_angvelsp['roll'].values * 180 / np.pi
+        df_angvelsp['pitch rate sp'] = df_angvelsp['pitch'].values * 180 / np.pi
+        df_angvelsp['yaw rate sp'] = df_angvelsp['yaw'].values * 180 / np.pi
+        df_angvelsp = PandasTools.convert_index_from_us_to_s(df_angvelsp)
+        df_angvelsp = PandasTools.apply_time_win(df_angvelsp, time_win)
+
+        return [df_angvel, df_angvelsp]
+
+    @staticmethod
+    def get_pandas_dataframe_man_ctrl(tmpdir, ulgfile, time_win):
+        csvname = 'manual_control_setpoint_0'
+        df_sticks = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        df_sticks.rename(columns={"x": "roll stick", "y": "pitch stick", "z": "throttle stick", 'r': "yaw stick"},
+                         inplace=True)
+        df_sticks = PandasTools.convert_index_from_us_to_s(df_sticks)
+        df_sticks = PandasTools.apply_time_win(df_sticks, time_win)
+
+        csvname = 'manual_control_switches_0'
+        df_switches = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        df_switches = PandasTools.convert_index_from_us_to_s(df_switches)
+        df_switches = PandasTools.apply_time_win(df_switches, time_win)
+
+        return [df_sticks, df_switches]
+
+    @staticmethod
+    def get_pandas_dataframe_ctrl_alloc(tmpdir, ulgfile, time_win):
+        csvname = 'actuator_controls_0_0'
+        df_in = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        df_in.rename(columns={"control[0]": "roll rate cmd", "control[1]": "pitch rate cmd",
+                              "control[2]": "yaw rate cmd", 'control[3]': "az cmd"},
+                     inplace=True)
+        df_in = PandasTools.convert_index_from_us_to_s(df_in)
+        df_in = PandasTools.apply_time_win(df_in, time_win)
+
+        # csvname = 'actuator_outputs_0'
+        csvname = 'actuator_outputs_1'
+        df_out = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        df_out = PandasTools.convert_index_from_us_to_s(df_out)
+        df_out = PandasTools.apply_time_win(df_out, time_win)
+
+        return [df_in, df_out]

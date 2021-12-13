@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 
-import copy
 import os.path
-import pandas as pd
-from scipy import interpolate
 import numpy as np
 # from datetime import datetime   # , date, time
 import datetime
@@ -14,10 +11,10 @@ from toopazo_tools.time_series import TimeseriesTools
 from toopazo_tools.matplotlib import PlotTools, FigureTools
 
 # Check if this is running inside toopazo_ulg/ or deployed as a module
-if os.path.isfile('file_parser.py'):
-    from file_parser import UlgParser
+if os.path.isfile('parse_file.py'):
+    from parse_file import UlgParser
 else:
-    from toopazo_ulg.file_parser import UlgParser
+    from toopazo_ulg.parse_file import UlgParser
 
 
 class UlgPlotBasics:
@@ -378,15 +375,7 @@ class UlgPlotBasics:
         # fig.autofmt_xdate()
 
     def pos_vel(self, ulgfile, time_win):
-        tmpdir = self.tmpdir
-        ulgfile = ulgfile
-        pltname = 'vehicle_local_position_0'
-        df_pv = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
-        df_pv['vnorm'] = np.linalg.norm([df_pv['vx'].values, df_pv['vy'].values, df_pv['vz'].values], axis=0)
-        df_pv['pnorm'] = np.linalg.norm([df_pv['x'].values, df_pv['y'].values, df_pv['z'].values], axis=0)
-        df_pv = PandasTools.convert_index_from_us_to_s(df_pv)
-        df_pv = PandasTools.apply_time_win(df_pv, time_win)
-        # print(df)
+        df_pv = UlgParser.get_pandas_dataframe_pos_vel(self.tmpdir, ulgfile, time_win)
 
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=self.figsize, sharex=True)
         df_pv.plot(y=['x', 'y', 'z', 'pnorm'], ax=ax1, grid=True)
@@ -402,24 +391,7 @@ class UlgPlotBasics:
         UlgPlotBasics.save_fig(fig, jpgfilename)
 
     def rpy_angles(self, ulgfile, time_win):
-        tmpdir = self.tmpdir
-        ulgfile = ulgfile
-        pltname = 'vehicle_attitude_0_deg'
-        df_att = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
-        df_att = PandasTools.convert_index_from_us_to_s(df_att)
-        df_att = PandasTools.apply_time_win(df_att, time_win)
-        # print(df)
-
-        tmpdir = self.tmpdir
-        ulgfile = ulgfile
-        pltname = 'vehicle_attitude_setpoint_0'
-        df_attsp = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
-        df_attsp['roll sp'] = df_attsp['roll_body'].values * 180 / np.pi
-        df_attsp['pitch sp'] = df_attsp['pitch_body'].values * 180 / np.pi
-        df_attsp['yaw sp'] = df_attsp['yaw_body'].values * 180 / np.pi
-        df_attsp = PandasTools.convert_index_from_us_to_s(df_attsp)
-        df_attsp = PandasTools.apply_time_win(df_attsp, time_win)
-        # print(df)
+        [df_att, df_attsp] = UlgParser.get_pandas_dataframe_rpy_angles(self.tmpdir, ulgfile, time_win)
 
         fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=self.figsize, sharex=True)
         df_att.plot(y=['roll'], ax=ax1, grid=True)
@@ -441,27 +413,7 @@ class UlgPlotBasics:
         UlgPlotBasics.save_fig(fig, jpgfilename)
 
     def pqr_angvel(self, ulgfile, time_win):
-        tmpdir = self.tmpdir
-        ulgfile = ulgfile
-        pltname = 'vehicle_angular_velocity_0'
-        df_angvel = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
-        df_angvel['roll rate'] = df_angvel['xyz[0]'].values * 180 / np.pi
-        df_angvel['pitch rate'] = df_angvel['xyz[1]'].values * 180 / np.pi
-        df_angvel['yaw rate'] = df_angvel['xyz[2]'].values * 180 / np.pi
-        df_angvel = PandasTools.convert_index_from_us_to_s(df_angvel)
-        df_angvel = PandasTools.apply_time_win(df_angvel, time_win)
-        # print(df)
-
-        tmpdir = self.tmpdir
-        ulgfile = ulgfile
-        pltname = 'vehicle_rates_setpoint_0'
-        df_angvelsp = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
-        df_angvelsp['roll rate sp'] = df_angvelsp['roll'].values * 180 / np.pi
-        df_angvelsp['pitch rate sp'] = df_angvelsp['pitch'].values * 180 / np.pi
-        df_angvelsp['yaw rate sp'] = df_angvelsp['yaw'].values * 180 / np.pi
-        df_angvelsp = PandasTools.convert_index_from_us_to_s(df_angvelsp)
-        df_angvelsp = PandasTools.apply_time_win(df_angvelsp, time_win)
-        # print(df)
+        [df_angvel, df_angvelsp] = UlgParser.get_pandas_dataframe_pqr_angvel(self.tmpdir, ulgfile, time_win)
 
         fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=self.figsize, sharex=True)
         df_angvel.plot(y=['roll rate'], ax=ax1, grid=True)
@@ -483,23 +435,7 @@ class UlgPlotBasics:
         UlgPlotBasics.save_fig(fig, jpgfilename)
 
     def man_ctrl(self, ulgfile, time_win):
-        tmpdir = self.tmpdir
-        ulgfile = ulgfile
-        pltname = 'manual_control_setpoint_0'
-        df_sticks = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
-        df_sticks.rename(columns={"x": "roll stick", "y": "pitch stick", "z": "throttle stick", 'r': "yaw stick"},
-                         inplace=True)
-        df_sticks = PandasTools.convert_index_from_us_to_s(df_sticks)
-        df_sticks = PandasTools.apply_time_win(df_sticks, time_win)
-        # print(df_sticks)
-
-        tmpdir = self.tmpdir
-        ulgfile = ulgfile
-        pltname = 'manual_control_switches_0'
-        df_switches = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
-        df_switches = PandasTools.convert_index_from_us_to_s(df_switches)
-        df_switches = PandasTools.apply_time_win(df_switches, time_win)
-        # print(df)
+        [df_sticks, df_switches] = UlgParser.get_pandas_dataframe_man_ctrl(self.tmpdir, ulgfile, time_win)
 
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=self.figsize, sharex=True)
         df_sticks.plot(y=['roll stick', 'pitch stick', 'yaw stick', 'throttle stick'], ax=ax1, grid=True)
@@ -515,25 +451,7 @@ class UlgPlotBasics:
         UlgPlotBasics.save_fig(fig, jpgfilename)
 
     def ctrl_alloc(self, ulgfile, time_win):
-        tmpdir = self.tmpdir
-        ulgfile = ulgfile
-        pltname = 'actuator_controls_0_0'
-        df_in = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
-        df_in.rename(columns={"control[0]": "roll rate cmd", "control[1]": "pitch rate cmd",
-                              "control[2]": "yaw rate cmd", 'control[3]': "az cmd"},
-                     inplace=True)
-        df_in = PandasTools.convert_index_from_us_to_s(df_in)
-        df_in = PandasTools.apply_time_win(df_in, time_win)
-        # print(df)
-
-        tmpdir = self.tmpdir
-        ulgfile = ulgfile
-        # pltname = 'actuator_outputs_0'
-        pltname = 'actuator_outputs_1'
-        df_out = UlgParser.get_pandas_dataframe_from_csv_file(tmpdir, ulgfile, pltname)
-        df_out = PandasTools.convert_index_from_us_to_s(df_out)
-        df_out = PandasTools.apply_time_win(df_out, time_win)
-        # print(df)
+        [df_in, df_out] = UlgParser.get_pandas_dataframe_ctrl_alloc(self.tmpdir, ulgfile, time_win)
 
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=self.figsize, sharex=True)
         df_in.plot(y=['roll rate cmd', 'pitch rate cmd', 'yaw rate cmd', 'az cmd'], ax=ax1, grid=True)
@@ -548,100 +466,6 @@ class UlgPlotBasics:
         pltname = self.ctrl_alloc.__name__
         jpgfilename = self.get_jpgfilename(self.plotdir, ulgfile, pltname)
         UlgPlotBasics.save_fig(fig, jpgfilename)
-
-
-class PandasTools:
-    @staticmethod
-    def convert_index_from_us_to_s(dataframe):
-        dataframe.index = np.array(dataframe.index.tolist()) / 10 ** 6
-        dataframe.index.names = ['timestamp']
-        return dataframe
-
-    @staticmethod
-    def apply_time_win(dataframe, time_win):
-        if (time_win is not None) and (len(time_win) == 2):
-            # df = df.loc[time_win[0] < df.index < time_win[1]]
-            dataframe = dataframe.loc[time_win[0] < dataframe.index]
-            dataframe = dataframe.loc[dataframe.index < time_win[1]]
-        return dataframe
-
-    @staticmethod
-    def interpolate_df1_according_to_df2_index(df1, df2):
-        assert isinstance(df1, pd.DataFrame)
-        assert isinstance(df2, pd.DataFrame)
-
-        t1_arr = df1.index.values
-        t2_arr = df2.index.values
-
-        new_df1 = copy.deepcopy(df2)
-        new_df1.drop(columns=new_df1.columns.values, inplace=True)
-
-        for column in df1:
-            x1_arr = df1[column].values
-            # x2_arr = df2[df2_col].values
-
-            # Interpolate a 1-D function.
-            #
-            # x and y are arrays of values used to approximate some function
-            # f: y = f(x). This class returns a function whose call method uses
-            # interpolation to find the value of new points.
-            interp1d_fnct = interpolate.interp1d(x=t1_arr, y=x1_arr)
-            new_x1_arr = interp1d_fnct(t2_arr)
-
-            # Make sure that both ends of x1_arr are kept the same
-            new_x1_arr[0] = x1_arr[0]
-            new_x1_arr[-1] = x1_arr[-1]
-
-            new_df1[column] = new_x1_arr
-            # print(column)
-            # print(f'len(t1_arr) {len(t1_arr)}, len(t2_arr) {len(t2_arr)}')
-            # print(f'len(x1_arr) {len(x1_arr)}, len(new_x1_arr) {len(new_x1_arr)}')
-
-        return new_df1
-
-    @staticmethod
-    def resample(df1, df1_colname, df2, df2_colname):
-        assert isinstance(df1, pd.DataFrame)
-        assert isinstance(df2, pd.DataFrame)
-
-        # print('pandas_dataframe_downsample')
-        df1_microseconds = np.array([int(e * 10 ** 6) for e in df1.index.values])
-        # df2_microseconds = np.array([int(e * 10 ** 6) for e in df2.index.values])
-
-        df1_timedelta = []
-        for us in df1_microseconds:
-            tdelta = datetime.timedelta(microseconds=int(us))
-            #                 yyyy mm dd  hh  mm  ss  us
-            dtime = datetime.datetime(2000, 1, 1, 00, 00, 00, 00) + tdelta
-            # df1_timedelta.append(dtime)
-            tstamp = pd.Timestamp(dtime)
-            df1_timedelta.append(tstamp)
-        # print(df1_timedelta)
-        df1.index = df1_timedelta
-        df1.index.names = ['timestamp']
-        print(df1)
-        df1 = df1.resample("0.01S")
-        print(df1)
-        return
-
-        df1_rdict = TSTools.time_statistics(t_arr=df1_microseconds, verbose=True)
-        df2_rdict = TSTools.time_statistics(t_arr=df2_microseconds, verbose=True)
-
-        if len(df1_microseconds) < len(df2_microseconds):
-            df1.set_index(df1_microseconds, inplace=True)
-            df2.set_index(df2_microseconds, inplace=True)
-            [rt1_arr, rx1_arr] = TSTools.resample(
-                t1_arr=df1.index.values, x1_arr=df1[df1_colname].values, t2_arr=df2.index.values,
-                tolkey='t_dt_maxusgndev', tolval=df1_rdict['t_dt_mean']/5, verbose=True)
-
-        if len(df1_microseconds) > len(df2_microseconds):
-            df1.set_index(df1_microseconds, inplace=True)
-            df2.set_index(df2_microseconds, inplace=True)
-            [rt1_arr, rx1_arr] = TSTools.resample(
-                t1_arr=df2.index.values, x1_arr=df2[df2_colname].values, t2_arr=df1.index.values,
-                tolkey='t_dt_maxusgndev', tolval=df1_rdict['t_dt_mean']/5, verbose=True)
-
-        return
 
 
 if __name__ == '__main__':
