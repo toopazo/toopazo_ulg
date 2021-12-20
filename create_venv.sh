@@ -1,21 +1,27 @@
 
-# 1. Update local packages for distribution
-python3 -m pip install --upgrade setuptools wheel
-python3 -m pip install --upgrade twine
-#python3 -m pip install --user --upgrade setuptools wheel
-#python3 -m pip install --user --upgrade twine
+# Remove any previous venv
+rm -r venv
 
-# 2. Open setup.py and change the version, e.g., version='1.0.3'.
-python3 increment_setup_version.py
+# Install virtualenv
+python_ver=$(./create_venv.py); ${python_ver} -m venv venv
+# python3.7 -m venv venv
+# python3.8 -m venv venv
+# python3.9 -m venv venv
 
-# 3. It is sometimes neccessary to delete the build/ and dist/ folder
-rm -r build/*
-rm -r dist/*
+# Activate venv
+source venv/bin/activate
 
-# 4. Create distribution packages on your local machine, and check
-# the dist/ directory for the new version files
-python3 setup.py sdist bdist_wheel
+# Install dependencies using pip
+python -m ensurepip --upgrade
+python -m pip install --upgrade pip
+python -m pip install --upgrade setuptools wheel
+python -m pip install --upgrade twine
 
-# 5. Upload the distribution files to https://pypi.org/ server
-python3 -m twine upload dist/*
+python -m pip install -U scipy
+python -m pip install -U matplotlib
+python -m pip install -U numpy
+python -m pip install -U pandas
+#python -m pip install -U pyserial
+#python -m pip install -U pyqt5
+python -m pip install -U toopazo-tools
 

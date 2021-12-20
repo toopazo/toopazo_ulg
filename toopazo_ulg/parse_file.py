@@ -8,6 +8,7 @@ import csv
 import numpy as np
 import math
 import pandas as pd
+import os
 
 
 class UlgParser:
@@ -89,6 +90,19 @@ class UlgParser:
         csvfile = tmpdir + '/' + csvfile
         # print('[get_csvfile] csvfile %s' % csvfile)
         return csvfile
+
+    @staticmethod
+    def check_ulog2csv(tmpdir, ulgfile):
+        # Check if we need to run ulog2csv
+        csvname = 'actuator_controls_0_0'
+        csvfile = UlgParser.get_csvfile(tmpdir, ulgfile, csvname)
+        # if FFTools.is_file(csvfile):
+        if os.path.isfile(csvfile):
+            # UlgParser.ulog2info(ulg_file)
+            pass
+        else:
+            UlgParser.ulog2csv(ulgfile, tmpdir)
+            UlgParser.write_vehicle_attitude_0_deg(ulgfile, tmpdir)
 
     @staticmethod
     def parse_csv(ulgfile, csvname, tmpdir):

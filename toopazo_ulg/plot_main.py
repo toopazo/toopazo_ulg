@@ -24,7 +24,7 @@ else:
 
 
 class UlgPlot:
-    def __init__(self, bdir, log_num, time_win,
+    def __init__(self, bdir, time_win,
                  pos_vel, rpy_angles, pqr_angvel, man_ctrl, ctrl_alloc):
         # bdir = FFTools.full_path(args.bdir)
         # bdir = os.path.abspath(args.bdir)
@@ -41,7 +41,7 @@ class UlgPlot:
         except OSError:
             raise RuntimeError('Directories are not present or could not be created')
 
-        self.log_num = log_num
+        self.file_extension = 'ulg'
         self.time_win = time_win
 
         self.pos_vel = pos_vel
@@ -62,60 +62,57 @@ class UlgPlot:
         # Remove all files from tmpdir
         # self.ulgparser.clear_tmpdir()
 
-    def check_ulog2csv(self, ulgfile):
+    def process_file(self, ulg_file):
+        print('[process_file] Working on file %s' % ulg_file)
 
-        # Check if we need to run ulog2csv
-        csvname = 'actuator_controls_0_0'
-        csvfile = UlgParser.get_csvfile(self.tmpdir, ulgfile, csvname)
-        # if FFTools.is_file(csvfile):
-        if os.path.isfile(csvfile):
-            # UlgParser.ulog2info(ulgfile)
-            pass
-        else:
-            UlgParser.ulog2csv(ulgfile, self.tmpdir)
-            UlgParser.write_vehicle_attitude_0_deg(ulgfile, self.tmpdir)
-
-    def process_file(self, ulgfile):
-        if self.log_num is not None:
-            pattern = f'_{self.log_num}_'
-            if pattern not in ulgfile:
-                return
-
-        print('[process_file] Working on file %s' % ulgfile)
-
-        self.check_ulog2csv(ulgfile)
+        UlgParser.check_ulog2csv(self.tmpdir, ulg_file)
 
         if self.pos_vel:
-            self.ulg_plot_basics.pos_vel(ulgfile, self.time_win)
+            self.ulg_plot_basics.pos_vel(ulg_file, self.time_win)
 
         if self.rpy_angles:
-            self.ulg_plot_basics.rpy_angles(ulgfile, self.time_win)
+            self.ulg_plot_basics.rpy_angles(ulg_file, self.time_win)
 
         if self.pqr_angvel:
-            self.ulg_plot_basics.pqr_angvel(ulgfile, self.time_win)
+            self.ulg_plot_basics.pqr_angvel(ulg_file, self.time_win)
 
         if self.man_ctrl:
-            self.ulg_plot_basics.man_ctrl(ulgfile, self.time_win)
+            self.ulg_plot_basics.man_ctrl(ulg_file, self.time_win)
 
         if self.ctrl_alloc:
-            self.ulg_plot_basics.ctrl_alloc(ulgfile, self.time_win)
-            self.ulg_plot_mixer.ctrl_alloc_model(ulgfile, self.time_win)
-            # self.ulg_plot_mixer.mixer_input_output(ulgfile, closefig)
-            # self.ulg_plot_basics.actuator_controls_0_0(ulgfile, closefig)
-            # self.ulg_plot_basics.actuator_outputs_0(ulgfile, closefig)
+            self.ulg_plot_basics.ctrl_alloc(ulg_file, self.time_win)
+            self.ulg_plot_mixer.ctrl_alloc_model(ulg_file, self.time_win)
+            # self.ulg_plot_mixer.mixer_input_output(ulg_file, closefig)
+            # self.ulg_plot_basics.actuator_controls_0_0(ulg_file, closefig)
+            # self.ulg_plot_basics.actuator_outputs_0(ulg_file, closefig)
 
-        # self.ulg_plot_basics.nwindow_hover_pos(ulgfile, closefig)
-        # self.ulg_plot_basics.nwindow_hover_vel(ulgfile, closefig)
+        # self.ulg_plot_basics.nwindow_hover_pos(ulg_file, closefig)
+        # self.ulg_plot_basics.nwindow_hover_vel(ulg_file, closefig)
 
-        # self.ulg_plot_sysid.cmd_roll_to_attitude(ulgfile, closefig)
-        # self.ulg_plot_sysid.cmd_pitch_to_attitude(ulgfile, closefig)
-        # self.ulg_plot_sysid.cmd_yawrate_to_attitude(ulgfile, closefig)
-        # self.ulg_plot_sysid.cmd_az_to_attitude(ulgfile, closefig)
+        # self.ulg_plot_sysid.cmd_roll_to_attitude(ulg_file, closefig)
+        # self.ulg_plot_sysid.cmd_pitch_to_attitude(ulg_file, closefig)
+        # self.ulg_plot_sysid.cmd_yawrate_to_attitude(ulg_file, closefig)
+        # self.ulg_plot_sysid.cmd_az_to_attitude(ulg_file, closefig)
 
-    def process_logdir(self):
-        print('[process_logdir] processing %s' % self.logdir)
+    def process_folder(self):
+        print('[process_folder] Working on folder %s' % self.logdir)
         # foldername, extension, method
-        FFTools.run_method_on_folder(self.logdir, '.ulg', self.process_file)
+        FFTools.run_method_on_folder(self.logdir, self.file_extension, self.process_file)
+        
+    def find_ulg_file(self, log_num):
+        ulg_file = 'No such file'
+        file_arr = FFTools.get_file_arr(fpath=self.logdir, extension=self.file_extension)
+        for file in file_arr:
+            if log_num is not None:
+                pattern = f'_{log_num}_'
+                if pattern in file:
+                    ulg_file = os.path.abspath(file)
+                    break
+        print(f'[find_ulg_file] logdir {self.logdir}')
+        print(f'[find_ulg_file] file_extension {self.file_extension}')
+        print(f'[find_ulg_file] log_num {log_num}')
+        print(f'[find_ulg_file] ulg_file {ulg_file}')
+        return ulg_file
 
 
 print('[plot_main] module name is %s' % __name__)
@@ -140,11 +137,14 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    ulg_data = UlgPlot(
-        os.path.abspath(args.bdir), args.log_num, args.time_win,
+    ulg_plot = UlgPlot(
+        os.path.abspath(args.bdir), args.time_win,
         args.pos_vel, args.rpy_angles, args.pqr_angvel, args.man_ctrl, args.ctrl_alloc
     )
-    ulg_data.process_logdir()
+    if args.log_num is not None:
+        ulg_plot.process_file(ulg_file=ulg_plot.find_ulg_file(args.log_num))
+    else:
+        ulg_plot.process_folder()
 
     # Run it as a package
     # python -m toopazo_ulg.plot_main \
