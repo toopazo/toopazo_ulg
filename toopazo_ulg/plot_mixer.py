@@ -423,7 +423,7 @@ class UlgPlotMixer(UlgPlotBasics):
         return [lsq_matrix, lsq_bias, lsq_error]
 
     def ctrl_alloc_model(self, ulgfile, time_win):
-        [df_in, df_out] = UlgParser.get_pandas_dataframe_ctrl_alloc(self.tmpdir, ulgfile, time_win)
+        [df_in, df_out] = UlgParser.get_ctrl_alloc_df(self.tmpdir, ulgfile, time_win)
 
         # PandasTools.resample(df_in, 'roll rate cmd', df_out, 'output[0]')
         df_in = PandasTools.interpolate_df1_according_to_df2_index(df_in, df_out)

@@ -367,7 +367,7 @@ class UlgParser:
         return df
 
     @staticmethod
-    def get_pandas_dataframe_pos_vel(tmpdir, ulgfile, time_win):
+    def get_pos_vel_df(tmpdir, ulgfile, time_win):
         csvname = 'vehicle_local_position_0'
         df_pv = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
         df_pv['vnorm'] = np.linalg.norm(
@@ -383,7 +383,7 @@ class UlgParser:
         return df_pv
 
     @staticmethod
-    def get_pandas_dataframe_rpy_angles(tmpdir, ulgfile, time_win):
+    def get_rpy_angles_df(tmpdir, ulgfile, time_win):
         csvname = 'vehicle_attitude_0_deg'
         df_att = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
         df_att = PandasTools.convert_index_from_us_to_s(df_att)
@@ -400,7 +400,7 @@ class UlgParser:
         return [df_att, df_attsp]
 
     @staticmethod
-    def get_pandas_dataframe_pqr_angvel(tmpdir, ulgfile, time_win):
+    def get_pqr_angvel_df(tmpdir, ulgfile, time_win):
         csvname = 'vehicle_angular_velocity_0'
         df_angvel = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
         df_angvel['roll rate'] = df_angvel['xyz[0]'].values * 180 / np.pi
@@ -420,7 +420,7 @@ class UlgParser:
         return [df_angvel, df_angvelsp]
 
     @staticmethod
-    def get_pandas_dataframe_man_ctrl(tmpdir, ulgfile, time_win):
+    def get_man_ctrl_df(tmpdir, ulgfile, time_win):
         csvname = 'manual_control_setpoint_0'
         df_sticks = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
         df_sticks.rename(
@@ -442,7 +442,7 @@ class UlgParser:
         return [df_sticks, df_switches]
 
     @staticmethod
-    def get_pandas_dataframe_ctrl_alloc(tmpdir, ulgfile, time_win):
+    def get_ctrl_alloc_df(tmpdir, ulgfile, time_win):
         csvname = 'actuator_controls_0_0'
         df_in = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
         df_in.rename(
@@ -465,7 +465,7 @@ class UlgParser:
         return [df_in, df_out]
 
     @staticmethod
-    def get_pandas_dataframe_firefly_delta(tmpdir, ulgfile, time_win):
+    def get_firefly_delta_df(tmpdir, ulgfile, time_win):
         csvname = 'firefly_delta'
         df_in = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
         df_in.rename(columns={"control[0]": "roll rate cmd",

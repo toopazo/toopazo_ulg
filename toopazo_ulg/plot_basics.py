@@ -375,7 +375,7 @@ class UlgPlotBasics:
         # fig.autofmt_xdate()
 
     def pos_vel(self, ulgfile, time_win):
-        df_pv = UlgParser.get_pandas_dataframe_pos_vel(self.tmpdir, ulgfile, time_win)
+        df_pv = UlgParser.get_pos_vel_df(self.tmpdir, ulgfile, time_win)
 
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=self.figsize, sharex=True)
         df_pv.plot(y=['x', 'y', 'z', 'pnorm'], ax=ax1, grid=True)
@@ -391,7 +391,7 @@ class UlgPlotBasics:
         UlgPlotBasics.save_fig(fig, jpgfilename)
 
     def rpy_angles(self, ulgfile, time_win):
-        [df_att, df_attsp] = UlgParser.get_pandas_dataframe_rpy_angles(self.tmpdir, ulgfile, time_win)
+        [df_att, df_attsp] = UlgParser.get_rpy_angles_df(self.tmpdir, ulgfile, time_win)
 
         fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=self.figsize, sharex=True)
         df_att.plot(y=['roll'], ax=ax1, grid=True)
@@ -413,7 +413,7 @@ class UlgPlotBasics:
         UlgPlotBasics.save_fig(fig, jpgfilename)
 
     def pqr_angvel(self, ulgfile, time_win):
-        [df_angvel, df_angvelsp] = UlgParser.get_pandas_dataframe_pqr_angvel(self.tmpdir, ulgfile, time_win)
+        [df_angvel, df_angvelsp] = UlgParser.get_pqr_angvel_df(self.tmpdir, ulgfile, time_win)
 
         fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=self.figsize, sharex=True)
         df_angvel.plot(y=['roll rate'], ax=ax1, grid=True)
@@ -435,7 +435,7 @@ class UlgPlotBasics:
         UlgPlotBasics.save_fig(fig, jpgfilename)
 
     def man_ctrl(self, ulgfile, time_win):
-        [df_sticks, df_switches] = UlgParser.get_pandas_dataframe_man_ctrl(self.tmpdir, ulgfile, time_win)
+        [df_sticks, df_switches] = UlgParser.get_man_ctrl_df(self.tmpdir, ulgfile, time_win)
 
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=self.figsize, sharex=True)
         df_sticks.plot(y=['roll stick', 'pitch stick', 'yaw stick', 'throttle stick'], ax=ax1, grid=True)
@@ -451,7 +451,7 @@ class UlgPlotBasics:
         UlgPlotBasics.save_fig(fig, jpgfilename)
 
     def ctrl_alloc(self, ulgfile, time_win):
-        [df_in, df_out] = UlgParser.get_pandas_dataframe_ctrl_alloc(self.tmpdir, ulgfile, time_win)
+        [df_in, df_out] = UlgParser.get_ctrl_alloc_df(self.tmpdir, ulgfile, time_win)
 
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=self.figsize, sharex=True)
         df_in.plot(y=['roll rate cmd', 'pitch rate cmd', 'yaw rate cmd', 'az cmd'], ax=ax1, grid=True)
