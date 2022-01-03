@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 
-from toopazo_tools.file_folder import FileFolderTools
-from toopazo_tools.pandas import PandasTools
-
 import subprocess
 import csv
 import numpy as np
 import math
 import pandas as pd
 import os
+import copy
+import pandas
+from toopazo_tools.file_folder import FileFolderTools
+from toopazo_tools.pandas import PandasTools, DataframeTools
 
 
 class UlgParser:
@@ -369,8 +370,14 @@ class UlgParser:
     def get_pandas_dataframe_pos_vel(tmpdir, ulgfile, time_win):
         csvname = 'vehicle_local_position_0'
         df_pv = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
-        df_pv['vnorm'] = np.linalg.norm([df_pv['vx'].values, df_pv['vy'].values, df_pv['vz'].values], axis=0)
-        df_pv['pnorm'] = np.linalg.norm([df_pv['x'].values, df_pv['y'].values, df_pv['z'].values], axis=0)
+        df_pv['vnorm'] = np.linalg.norm(
+            [df_pv['vx'].values, df_pv['vy'].values, df_pv['vz'].values],
+            axis=0
+        )
+        df_pv['pnorm'] = np.linalg.norm(
+            [df_pv['x'].values, df_pv['y'].values, df_pv['z'].values],
+            axis=0
+        )
         df_pv = PandasTools.convert_index_from_us_to_s(df_pv)
         df_pv = PandasTools.apply_time_win(df_pv, time_win)
         return df_pv
@@ -416,8 +423,14 @@ class UlgParser:
     def get_pandas_dataframe_man_ctrl(tmpdir, ulgfile, time_win):
         csvname = 'manual_control_setpoint_0'
         df_sticks = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
-        df_sticks.rename(columns={"x": "roll stick", "y": "pitch stick", "z": "throttle stick", 'r': "yaw stick"},
-                         inplace=True)
+        df_sticks.rename(
+            columns={
+                "x": "roll stick",
+                "y": "pitch stick",
+                "z": "throttle stick",
+                'r': "yaw stick"
+            },
+            inplace=True)
         df_sticks = PandasTools.convert_index_from_us_to_s(df_sticks)
         df_sticks = PandasTools.apply_time_win(df_sticks, time_win)
 
@@ -432,8 +445,33 @@ class UlgParser:
     def get_pandas_dataframe_ctrl_alloc(tmpdir, ulgfile, time_win):
         csvname = 'actuator_controls_0_0'
         df_in = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
-        df_in.rename(columns={"control[0]": "roll rate cmd", "control[1]": "pitch rate cmd",
-                              "control[2]": "yaw rate cmd", 'control[3]': "az cmd"},
+        df_in.rename(
+            columns={
+                "control[0]": "roll rate cmd",
+                "control[1]": "pitch rate cmd",
+                "control[2]": "yaw rate cmd",
+                'control[3]': "az cmd"
+            },
+            inplace=True)
+        df_in = PandasTools.convert_index_from_us_to_s(df_in)
+        df_in = PandasTools.apply_time_win(df_in, time_win)
+
+        # csvname = 'actuator_outputs_0'
+        csvname = 'actuator_outputs_1'
+        df_out = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        df_out = PandasTools.convert_index_from_us_to_s(df_out)
+        df_out = PandasTools.apply_time_win(df_out, time_win)
+
+        return [df_in, df_out]
+
+    @staticmethod
+    def get_pandas_dataframe_firefly_delta(tmpdir, ulgfile, time_win):
+        csvname = 'firefly_delta'
+        df_in = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        df_in.rename(columns={"control[0]": "roll rate cmd",
+                              "control[1]": "pitch rate cmd",
+                              "control[2]": "yaw rate cmd",
+                              'control[3]': "az cmd"},
                      inplace=True)
         df_in = PandasTools.convert_index_from_us_to_s(df_in)
         df_in = PandasTools.apply_time_win(df_in, time_win)
@@ -445,3 +483,109 @@ class UlgParser:
         df_out = PandasTools.apply_time_win(df_out, time_win)
 
         return [df_in, df_out]
+
+
+class UlgParserTools:
+    @staticmethod
+    def synchronize(ulg_dict, time_secs):
+        max_delta = 0.01
+        if DataframeTools.check_time_difference(ulg_dict, max_delta):
+            # time_secs = DataframeTools.shortest_time_secs(ulg_dict)
+            new_df_arr = UlgParserTools.resample(
+                ulg_dict, time_secs, max_delta)
+            return copy.deepcopy(new_df_arr)
+        else:
+            raise RuntimeError('UlgParserTools.check_time_difference failed')
+
+    @staticmethod
+    def resample(escid_dict, time_secs, max_delta):
+        if DataframeTools.check_time_difference(escid_dict, max_delta):
+            # time_secs = DataframeTools.shortest_time_secs(escid_dict)
+            pass
+        else:
+            raise RuntimeError('EscidParserTools.check_time_difference failed')
+
+        new_escid_dict = {}
+        x = time_secs
+        for key, ulg_df in escid_dict.items():
+            # xp = ulg_df.index
+            xp = DataframeTools.index_to_elapsed_time(ulg_df)
+            data = UlgParserTools.get_data_by_type(x, xp, ulg_df, key)
+            index = x
+            new_escid_df = pandas.DataFrame(data=data, index=index)
+            new_escid_dict[key] = new_escid_df
+            # print(f"key {key} ------------------------")
+            # print(f"{ulg_df}")
+            # print(f"{new_escid_df}")
+        return copy.deepcopy(new_escid_dict)
+
+    @staticmethod
+    def get_data_by_type(x, xp, ulg_df, ulg_type):
+        if ulg_type == 'ulg_pv_df':
+            data = {
+                'x': np.interp(x, xp, fp=ulg_df['x']),
+                'y': np.interp(x, xp, fp=ulg_df['y']),
+                'z': np.interp(x, xp, fp=ulg_df['z']),
+                'vx': np.interp(x, xp, fp=ulg_df['vx']),
+                'vy': np.interp(x, xp, fp=ulg_df['vy']),
+                'vz': np.interp(x, xp, fp=ulg_df['vz']),
+                'vnorm': np.interp(x, xp, fp=ulg_df['vnorm']),
+                'pnorm': np.interp(x, xp, fp=ulg_df['pnorm']),
+            }
+            return data
+        if ulg_type == 'ulg_att_df':
+            data = {
+                'roll': np.interp(x, xp, fp=ulg_df['roll']),
+                'pitch': np.interp(x, xp, fp=ulg_df['pitch']),
+                'yaw': np.interp(x, xp, fp=ulg_df['yaw']),
+            }
+            return data
+        if ulg_type == 'ulg_in_df':
+            data = {
+                'roll rate cmd': np.interp(x, xp, fp=ulg_df['roll rate cmd']),
+                'pitch rate cmd': np.interp(x, xp, fp=ulg_df['pitch rate cmd']),
+                'yaw rate cmd': np.interp(x, xp, fp=ulg_df['yaw rate cmd']),
+                'az cmd': np.interp(x, xp, fp=ulg_df['az cmd']),
+            }
+            return data
+        if ulg_type == 'ulg_out_df':
+            data = {
+                'output[0]': np.interp(x, xp, fp=ulg_df['output[0]']),
+                'output[1]': np.interp(x, xp, fp=ulg_df['output[1]']),
+                'output[2]': np.interp(x, xp, fp=ulg_df['output[2]']),
+                'output[3]': np.interp(x, xp, fp=ulg_df['output[3]']),
+                'output[4]': np.interp(x, xp, fp=ulg_df['output[4]']),
+                'output[5]': np.interp(x, xp, fp=ulg_df['output[5]']),
+                'output[6]': np.interp(x, xp, fp=ulg_df['output[6]']),
+                'output[7]': np.interp(x, xp, fp=ulg_df['output[7]']),
+            }
+            return data
+
+    @staticmethod
+    def remove_by_condition(ulg_dict, ulg_ref_cond):
+        ulg_pv_df = ulg_dict['ulg_pv_df']
+        ulg_in_df = ulg_dict['ulg_in_df']
+        ulg_out_df = ulg_dict['ulg_out_df']
+
+        # ulg_key = f'output[{int(reference_escid - 11)}]'
+        # ulg_ref_cond = ulg_out_df[ulg_key] > min_throttle
+
+        ulg_ref_cond.index = ulg_pv_df.index
+        ulg_pv_df = ulg_pv_df[ulg_ref_cond]
+        ulg_ref_cond.index = ulg_in_df.index
+        ulg_in_df = ulg_in_df[ulg_ref_cond]
+        ulg_ref_cond.index = ulg_out_df.index
+        ulg_out_df = ulg_out_df[ulg_ref_cond]
+
+        ulg_dict = {
+            'ulg_pv_df': ulg_pv_df,
+            # 'ulg_att_df': ulg_att_df,
+            # 'ulg_attsp_df': ulg_attsp_df,
+            # 'ulg_angvel_df': ulg_angvel_df,
+            # 'ulg_angvelsp_df': ulg_angvelsp_df,
+            # 'ulg_sticks_df': ulg_sticks_df,
+            # 'ulg_switches_df': ulg_switches_df,
+            'ulg_in_df': ulg_in_df,
+            'ulg_out_df': ulg_out_df,
+        }
+        return copy.deepcopy(ulg_dict)
