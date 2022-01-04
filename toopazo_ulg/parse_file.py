@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import subprocess
 import csv
 import numpy as np
@@ -483,6 +481,50 @@ class UlgParser:
         df_out = PandasTools.apply_time_win(df_out, time_win)
 
         return [df_in, df_out]
+
+    @staticmethod
+    def get_ulg_df_dict(tmpdir, ulg_file, time_win):
+        if not os.path.isfile(ulg_file):
+            return None
+        else:
+            df_pv = UlgParser.get_pos_vel_df(
+                tmpdir, ulg_file, time_win=None)
+            ulg_pv_df = PandasTools.apply_time_win(df_pv, time_win)
+
+            # [df_att, df_attsp] = UlgParser.get_rpy_angles_df(
+            #     tmpdir, ulg_file, time_win=None)
+            # ulg_att_df = PandasTools.apply_time_win(df_att, time_win)
+            # ulg_attsp_df = PandasTools.apply_time_win(df_attsp, time_win)
+            #
+            # [df_angvel, df_angvelsp] = UlgParser.get_pqr_angvel_df(
+            #     tmpdir, ulg_file, time_win=None)
+            # ulg_angvel_df = PandasTools.apply_time_win(df_angvel, time_win)
+            # ulg_angvelsp_df = PandasTools.apply_time_win(
+            #     df_angvelsp, time_win)
+            #
+            # [df_sticks, df_switches] = UlgParser.get_man_ctrl_df(
+            #     tmpdir, ulg_file, time_win=None)
+            # ulg_sticks_df = PandasTools.apply_time_win(df_sticks, time_win)
+            # ulg_switches_df = PandasTools.apply_time_win(
+            #     df_switches, time_win)
+
+            [df_in, df_out] = UlgParser.get_ctrl_alloc_df(
+                tmpdir, ulg_file, time_win=None)
+            ulg_in_df = PandasTools.apply_time_win(df_in, time_win)
+            ulg_out_df = PandasTools.apply_time_win(df_out, time_win)
+
+            ulg_df_dict = {
+                'ulg_pv_df': ulg_pv_df,
+                # 'ulg_att_df': ulg_att_df,
+                # 'ulg_attsp_df': ulg_attsp_df,
+                # 'ulg_angvel_df': ulg_angvel_df,
+                # 'ulg_angvelsp_df': ulg_angvelsp_df,
+                # 'ulg_sticks_df': ulg_sticks_df,
+                # 'ulg_switches_df': ulg_switches_df,
+                'ulg_in_df': ulg_in_df,
+                'ulg_out_df': ulg_out_df,
+            }
+        return ulg_df_dict
 
 
 class UlgParserTools:
