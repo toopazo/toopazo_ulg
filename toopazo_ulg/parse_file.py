@@ -535,27 +535,27 @@ class UlgParserTools:
         """
         assert isinstance(df_dict, dict)
         if verbose:
-            print('Synchronizing df_dict')
+            print('Inside synchronize_df_dict')
             for key, df in df_dict.items():
                 print(key)
                 print(df)
 
-        time_secs = UlgParserTools.smallest_index(df_dict, verbose=True)
+        new_index = UlgParserTools.get_overlapping_index(df_dict, verbose=True)
         if verbose:
             for key, df in df_dict.items():
                 t0 = df.index[0]
                 t1 = df.index[-1]
                 print('df name %s, t0 %s, t1 %s' % (key, t0, t1))
-            print('time_secs %s' % time_secs)
+            print('time_secs %s' % new_index)
 
-        new_df_arr = UlgParserTools.resample(
-            df_dict, time_secs, max_delta=0.01)
+        new_df_arr = UlgParserTools.resample_df_dict(
+            df_dict, new_index, max_delta=0.01)
         return copy.deepcopy(new_df_arr)
 
     @staticmethod
-    def smallest_index(df_dict, verbose):
+    def get_overlapping_index(df_dict, verbose):
         if verbose:
-            print('Inside smallest_index')
+            print('Inside get_overlapping_index')
         t0_arr = []
         t1_arr = []
         ns_arr = []
@@ -585,18 +585,14 @@ class UlgParserTools:
         return np.linspace(t0_max, t1_min, ns_min)
 
     @staticmethod
-    def resample_df_dict(df_dict, time_secs, max_delta):
-        if DataframeTools.check_time_difference(df_dict, max_delta):
-            # time_secs = DataframeTools.shortest_time_secs(df_dict)
-            pass
-        else:
-            raise RuntimeError('EscidParserTools.check_time_difference failed')
-
+    def resample_df_dict(df_dict, time_secs):
         new_df_dict = {}
         x = time_secs
         for key, df in df_dict.items():
             # xp = ulg_df.index
-            xp = DataframeTools.index_to_elapsed_time(df)
+            # xp = DataframeTools.index_to_elapsed_time(df)
+            # xp = df.index - df.index[0]
+            xp = df.index
             data = UlgParserTools.get_data_by_type(x, xp, df, key)
             index = x
             new_df = pandas.DataFrame(data=data, index=index)
