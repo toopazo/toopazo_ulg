@@ -540,18 +540,49 @@ class UlgParserTools:
                 print(key)
                 print(df)
 
-        time_secs = DataframeTools.shortest_time_secs(df_dict)
+        time_secs = UlgParserTools.smallest_index(df_dict, verbose=True)
         if verbose:
             for key, df in df_dict.items():
-                df = df
                 t0 = df.index[0]
                 t1 = df.index[-1]
-                print('df name: %s, t0 %s, t1 %s' % (key, t0, t1))
+                print('df name %s, t0 %s, t1 %s' % (key, t0, t1))
             print('time_secs %s' % time_secs)
 
         new_df_arr = UlgParserTools.resample(
             df_dict, time_secs, max_delta=0.01)
         return copy.deepcopy(new_df_arr)
+
+    @staticmethod
+    def smallest_index(df_dict, verbose):
+        if verbose:
+            print('Inside smallest_index')
+        t0_arr = []
+        t1_arr = []
+        ns_arr = []
+        for key, df in df_dict.items():
+            t0 = df.index[0]
+            t1 = df.index[-1]
+            ns = len(df.index)
+            if verbose:
+                print('df name %s, t0 %s, t1 %s, ns %s' % (key, t0, t1, ns))
+            t0_arr.append(t0)
+            t1_arr.append(t1)
+            ns_arr.append(ns)
+
+        t0_max = np.max(t0_arr)
+        t1_min = np.min(t1_arr)
+        ns_min = np.min(ns_arr)
+        if t0_max < 0:
+            raise RuntimeError
+        if t1_min < t0_max:
+            raise RuntimeError
+        if ns_min <= 0:
+            raise RuntimeError
+        if verbose:
+            print('t0_max %s, t1_min %s, ns_min %s' %
+                  (t0_max, t1_min, ns_min))
+
+        return np.linspace(t0_max, t1_min, ns_min)
 
     @staticmethod
     def resample_df_dict(df_dict, time_secs, max_delta):
