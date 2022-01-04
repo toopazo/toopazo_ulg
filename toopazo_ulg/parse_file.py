@@ -527,6 +527,53 @@ class UlgParser:
 
 class UlgParserTools:
     @staticmethod
+    def synchronize_df_dict(df_dict, verbose):
+        """
+        :param df_dict: Dictionary of panda's dataframes to synchronize
+        :param verbose: Print info for debug
+        :return: Dataframes resampled at time_sec instants
+        """
+        assert isinstance(df_dict, dict)
+        if verbose:
+            print('Synchronizing df_dict')
+            for key, val in df_dict.items():
+                print(key)
+                print(val)
+
+        if verbose:
+            for key, val in df_dict.items():
+                df = val
+                t0 = val.index[0]
+                t1 = val.index[-1]
+                print('df: %s, t0 %s, t1 %s' % (df, t0, t1))
+        time_secs = DataframeTools.shortest_time_secs(df_dict)
+        new_df_arr = UlgParserTools.resample(
+            df_dict, time_secs, max_delta=0.01)
+        return copy.deepcopy(new_df_arr)
+
+    @staticmethod
+    def resample_df_dict(df_dict, time_secs, max_delta):
+        if DataframeTools.check_time_difference(df_dict, max_delta):
+            # time_secs = DataframeTools.shortest_time_secs(df_dict)
+            pass
+        else:
+            raise RuntimeError('EscidParserTools.check_time_difference failed')
+
+        new_df_dict = {}
+        x = time_secs
+        for key, df in df_dict.items():
+            # xp = ulg_df.index
+            xp = DataframeTools.index_to_elapsed_time(df)
+            data = UlgParserTools.get_data_by_type(x, xp, df, key)
+            index = x
+            new_df = pandas.DataFrame(data=data, index=index)
+            new_df_dict[key] = new_df
+            # print(f"key {key} ------------------------")
+            # print(f"{ulg_df}")
+            # print(f"{new_escid_df}")
+        return copy.deepcopy(new_df_dict)
+
+    @staticmethod
     def synchronize(ulg_dict, time_secs, verbose):
         """
         :param ulg_dict: Dictionary of panda's dataframes to synchronize
@@ -536,14 +583,19 @@ class UlgParserTools:
         """
         assert isinstance(ulg_dict, dict)
         if verbose:
-            print('Synchronizing ulg_dict')
+            print('Synchronizing df_dict')
             for key, val in ulg_dict.items():
                 print(key)
                 print(val)
 
         max_delta = 0.01
         if DataframeTools.check_time_difference(ulg_dict, max_delta):
-            # time_secs = DataframeTools.shortest_time_secs(ulg_dict)
+            if verbose:
+                print('DataframeTools.check_time_difference returned True')
+                print('This means that the first and second sample times')
+                print('are within %s' % max_delta)
+                print('seconds, for all dataframes in df_dict')
+            # time_secs = DataframeTools.shortest_time_secs(df_dict)
             new_df_arr = UlgParserTools.resample(
                 ulg_dict, time_secs, max_delta)
             return copy.deepcopy(new_df_arr)
@@ -551,26 +603,26 @@ class UlgParserTools:
             raise RuntimeError('UlgParserTools.check_time_difference failed')
 
     @staticmethod
-    def resample(escid_dict, time_secs, max_delta):
-        if DataframeTools.check_time_difference(escid_dict, max_delta):
-            # time_secs = DataframeTools.shortest_time_secs(escid_dict)
+    def resample(df_dict, time_secs, max_delta):
+        if DataframeTools.check_time_difference(df_dict, max_delta):
+            # time_secs = DataframeTools.shortest_time_secs(df_dict)
             pass
         else:
             raise RuntimeError('EscidParserTools.check_time_difference failed')
 
-        new_escid_dict = {}
+        new_df_dict = {}
         x = time_secs
-        for key, ulg_df in escid_dict.items():
+        for key, df in df_dict.items():
             # xp = ulg_df.index
-            xp = DataframeTools.index_to_elapsed_time(ulg_df)
-            data = UlgParserTools.get_data_by_type(x, xp, ulg_df, key)
+            xp = DataframeTools.index_to_elapsed_time(df)
+            data = UlgParserTools.get_data_by_type(x, xp, df, key)
             index = x
-            new_escid_df = pandas.DataFrame(data=data, index=index)
-            new_escid_dict[key] = new_escid_df
+            new_df = pandas.DataFrame(data=data, index=index)
+            new_df_dict[key] = new_df
             # print(f"key {key} ------------------------")
             # print(f"{ulg_df}")
             # print(f"{new_escid_df}")
-        return copy.deepcopy(new_escid_dict)
+        return copy.deepcopy(new_df_dict)
 
     @staticmethod
     def get_data_by_type(x, xp, ulg_df, ulg_type):
