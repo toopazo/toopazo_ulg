@@ -585,17 +585,16 @@ class UlgParserTools:
         return np.linspace(t0_max, t1_min, ns_min)
 
     @staticmethod
-    def resample_df_dict(df_dict, time_secs):
+    def resample_df_dict(df_dict, new_index):
         new_df_dict = {}
-        x = time_secs
+        x = new_index
         for key, df in df_dict.items():
             # xp = ulg_df.index
             # xp = DataframeTools.index_to_elapsed_time(df)
             # xp = df.index - df.index[0]
             xp = df.index
             data = UlgParserTools.get_data_by_type(x, xp, df, key)
-            index = x
-            new_df = pandas.DataFrame(data=data, index=index)
+            new_df = pandas.DataFrame(data=data, index=x)
             new_df_dict[key] = new_df
             # print(f"key {key} ------------------------")
             # print(f"{ulg_df}")
@@ -624,7 +623,7 @@ class UlgParserTools:
                 print('This means that the first and second sample times')
                 print('are within %s' % max_delta)
                 print('seconds, for all dataframes in df_dict')
-            # time_secs = DataframeTools.shortest_time_secs(df_dict)
+            # new_index = DataframeTools.shortest_time_secs(df_dict)
             new_df_arr = UlgParserTools.resample(
                 ulg_dict, time_secs, max_delta)
             return copy.deepcopy(new_df_arr)
@@ -634,7 +633,7 @@ class UlgParserTools:
     @staticmethod
     def resample(df_dict, time_secs, max_delta):
         if DataframeTools.check_time_difference(df_dict, max_delta):
-            # time_secs = DataframeTools.shortest_time_secs(df_dict)
+            # new_index = DataframeTools.shortest_time_secs(df_dict)
             pass
         else:
             raise RuntimeError('EscidParserTools.check_time_difference failed')
@@ -694,6 +693,7 @@ class UlgParserTools:
                 'output[7]': np.interp(x, xp, fp=ulg_df['output[7]']),
             }
             return data
+        raise RuntimeError
 
     @staticmethod
     def remove_by_condition(ulg_dict, ulg_ref_cond):
