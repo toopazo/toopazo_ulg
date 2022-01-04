@@ -483,7 +483,7 @@ class UlgParser:
         return [df_in, df_out]
 
     @staticmethod
-    def get_ulg_df_dict(tmpdir, ulg_file, time_win):
+    def get_ulg_dict(tmpdir, ulg_file, time_win):
         if not os.path.isfile(ulg_file):
             return None
         else:
