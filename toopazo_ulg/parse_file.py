@@ -546,7 +546,7 @@ class UlgParserTools:
 
         if verbose:
             print('After')
-            for key, df in df_dict.items():
+            for key, df in new_df_arr.items():
                 print(key)
                 print(df)
 
