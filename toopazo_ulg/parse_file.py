@@ -540,13 +540,15 @@ class UlgParserTools:
                 print(key)
                 print(df)
 
+        time_secs = DataframeTools.shortest_time_secs(df_dict)
         if verbose:
             for key, df in df_dict.items():
                 df = df
                 t0 = df.index[0]
                 t1 = df.index[-1]
                 print('df name: %s, t0 %s, t1 %s' % (key, t0, t1))
-        time_secs = DataframeTools.shortest_time_secs(df_dict)
+                print('time_secs %s' % time_secs)
+
         new_df_arr = UlgParserTools.resample(
             df_dict, time_secs, max_delta=0.01)
         return copy.deepcopy(new_df_arr)
