@@ -547,7 +547,7 @@ class UlgParserTools:
                 t0 = df.index[0]
                 t1 = df.index[-1]
                 print('df name: %s, t0 %s, t1 %s' % (key, t0, t1))
-                print('time_secs %s' % time_secs)
+            print('time_secs %s' % time_secs)
 
         new_df_arr = UlgParserTools.resample(
             df_dict, time_secs, max_delta=0.01)
