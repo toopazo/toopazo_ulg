@@ -536,16 +536,16 @@ class UlgParserTools:
         assert isinstance(df_dict, dict)
         if verbose:
             print('Synchronizing df_dict')
-            for key, val in df_dict.items():
+            for key, df in df_dict.items():
                 print(key)
-                print(val)
+                print(df)
 
         if verbose:
-            for key, val in df_dict.items():
-                df = val
-                t0 = val.index[0]
-                t1 = val.index[-1]
-                print('df: %s, t0 %s, t1 %s' % (df, t0, t1))
+            for key, df in df_dict.items():
+                df = df
+                t0 = df.index[0]
+                t1 = df.index[-1]
+                print('df name: %s, t0 %s, t1 %s' % (key, t0, t1))
         time_secs = DataframeTools.shortest_time_secs(df_dict)
         new_df_arr = UlgParserTools.resample(
             df_dict, time_secs, max_delta=0.01)
