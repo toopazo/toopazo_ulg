@@ -527,7 +527,20 @@ class UlgParser:
 
 class UlgParserTools:
     @staticmethod
-    def synchronize(ulg_dict, time_secs):
+    def synchronize(ulg_dict, time_secs, verbose):
+        """
+        :param ulg_dict: Dictionary of panda's dataframes to synchronize
+        :param time_secs: Array of time instants to resample (linear interop)
+        :param verbose: Print info for debug
+        :return: Dataframes resampled at time_sec instants
+        """
+        assert isinstance(ulg_dict, dict)
+        if verbose:
+            print('Synchronizing ulg_dict')
+            for key, val in ulg_dict.items():
+                print(key)
+                print(val)
+
         max_delta = 0.01
         if DataframeTools.check_time_difference(ulg_dict, max_delta):
             # time_secs = DataframeTools.shortest_time_secs(ulg_dict)
