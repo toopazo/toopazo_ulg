@@ -546,10 +546,9 @@ class UlgParserTools:
                 t0 = df.index[0]
                 t1 = df.index[-1]
                 print('df name %s, t0 %s, t1 %s' % (key, t0, t1))
-            print('time_secs %s' % new_index)
+            print('time_secs %s' % str(new_index))
 
-        new_df_arr = UlgParserTools.resample_df_dict(
-            df_dict, new_index, max_delta=0.01)
+        new_df_arr = UlgParserTools.resample_df_dict(df_dict, new_index)
         return copy.deepcopy(new_df_arr)
 
     @staticmethod
