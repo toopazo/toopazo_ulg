@@ -527,22 +527,22 @@ class UlgParser:
 
 class UlgParserTools:
     @staticmethod
-    def synchronize_df_dict(df_dict, verbose):
+    def synchronize_ulg_dict(ulg_dict, verbose):
         """
-        :param df_dict: Dictionary of panda's dataframes to synchronize
+        :param ulg_dict: Dictionary of panda's dataframes to synchronize
         :param verbose: Print info for debug
         :return: Dataframes resampled at time_sec instants
         """
-        assert isinstance(df_dict, dict)
+        assert isinstance(ulg_dict, dict)
         if verbose:
-            print('Inside synchronize_df_dict')
+            print('Inside synchronize_ulg_dict')
             print('Before')
-            for key, df in df_dict.items():
+            for key, df in ulg_dict.items():
                 print(key)
                 print(df)
 
-        new_index = UlgParserTools.get_overlapping_index(df_dict, verbose)
-        new_df_arr = UlgParserTools.resample_df_dict(df_dict, new_index)
+        new_index = UlgParserTools.get_overlapping_index(ulg_dict, verbose)
+        new_df_arr = UlgParserTools.resample_ulg_dict(ulg_dict, new_index)
 
         if verbose:
             print('After')
@@ -553,13 +553,13 @@ class UlgParserTools:
         return copy.deepcopy(new_df_arr)
 
     @staticmethod
-    def get_overlapping_index(df_dict, verbose):
+    def get_overlapping_index(ulg_dict, verbose):
         if verbose:
             print('Inside get_overlapping_index')
         t0_arr = []
         t1_arr = []
         ns_arr = []
-        for key, df in df_dict.items():
+        for key, df in ulg_dict.items():
             t0 = df.index[0]
             t1 = df.index[-1]
             ns = len(df.index)
@@ -585,21 +585,21 @@ class UlgParserTools:
         return np.linspace(t0_max, t1_min, ns_min)
 
     @staticmethod
-    def resample_df_dict(df_dict, new_index):
-        new_df_dict = {}
+    def resample_ulg_dict(ulg_dict, new_index):
+        new_ulg_dict = {}
         x = new_index
-        for key, df in df_dict.items():
+        for key, df in ulg_dict.items():
             # xp = ulg_df.index
             # xp = DataframeTools.index_to_elapsed_time(df)
             # xp = df.index - df.index[0]
             xp = df.index
             data = UlgParserTools.get_data_by_type(x, xp, df, key)
             new_df = pandas.DataFrame(data=data, index=x)
-            new_df_dict[key] = new_df
+            new_ulg_dict[key] = new_df
             # print(f"key {key} ------------------------")
             # print(f"{ulg_df}")
             # print(f"{new_escid_df}")
-        return copy.deepcopy(new_df_dict)
+        return copy.deepcopy(new_ulg_dict)
 
     # @staticmethod
     # def synchronize(ulg_dict, time_secs, verbose):
@@ -611,7 +611,7 @@ class UlgParserTools:
     #     """
     #     assert isinstance(ulg_dict, dict)
     #     if verbose:
-    #         print('Synchronizing df_dict')
+    #         print('Synchronizing ulg_dict')
     #         for key, val in ulg_dict.items():
     #             print(key)
     #             print(val)
@@ -622,8 +622,8 @@ class UlgParserTools:
     #             print('DataframeTools.check_time_difference returned True')
     #             print('This means that the first and second sample times')
     #             print('are within %s' % max_delta)
-    #             print('seconds, for all dataframes in df_dict')
-    #         # new_index = DataframeTools.shortest_time_secs(df_dict)
+    #             print('seconds, for all dataframes in ulg_dict')
+    #         # new_index = DataframeTools.shortest_time_secs(ulg_dict)
     #         new_df_arr = UlgParserTools.resample(
     #             ulg_dict, time_secs, max_delta)
     #         return copy.deepcopy(new_df_arr)
@@ -631,27 +631,27 @@ class UlgParserTools:
     #         raise RuntimeError('UlgParserTools.check_time_difference failed')
 
     # @staticmethod
-    # def resample(df_dict, time_secs, max_delta):
-    #     if DataframeTools.check_time_difference(df_dict, max_delta):
-    #         # new_index = DataframeTools.shortest_time_secs(df_dict)
+    # def resample(ulg_dict, time_secs, max_delta):
+    #     if DataframeTools.check_time_difference(ulg_dict, max_delta):
+    #         # new_index = DataframeTools.shortest_time_secs(ulg_dict)
     #         pass
     #     else:
     #         raise RuntimeError(
     #             'EscidParserTools.check_time_difference failed')
     #
-    #     new_df_dict = {}
+    #     new_ulg_dict = {}
     #     x = time_secs
-    #     for key, df in df_dict.items():
+    #     for key, df in ulg_dict.items():
     #         # xp = ulg_df.index
     #         xp = DataframeTools.index_to_elapsed_time(df)
     #         data = UlgParserTools.get_data_by_type(x, xp, df, key)
     #         index = x
     #         new_df = pandas.DataFrame(data=data, index=index)
-    #         new_df_dict[key] = new_df
+    #         new_ulg_dict[key] = new_df
     #         # print(f"key {key} ------------------------")
     #         # print(f"{ulg_df}")
     #         # print(f"{new_escid_df}")
-    #     return copy.deepcopy(new_df_dict)
+    #     return copy.deepcopy(new_ulg_dict)
 
     @staticmethod
     def get_data_by_type(x, xp, ulg_df, ulg_type):
