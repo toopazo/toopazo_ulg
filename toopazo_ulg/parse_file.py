@@ -536,19 +536,20 @@ class UlgParserTools:
         assert isinstance(df_dict, dict)
         if verbose:
             print('Inside synchronize_df_dict')
+            print('Before')
             for key, df in df_dict.items():
                 print(key)
                 print(df)
 
         new_index = UlgParserTools.get_overlapping_index(df_dict, verbose=True)
-        if verbose:
-            for key, df in df_dict.items():
-                t0 = df.index[0]
-                t1 = df.index[-1]
-                print('df name %s, t0 %s, t1 %s' % (key, t0, t1))
-            print('time_secs %s' % str(new_index))
-
         new_df_arr = UlgParserTools.resample_df_dict(df_dict, new_index)
+
+        if verbose:
+            print('After')
+            for key, df in df_dict.items():
+                print(key)
+                print(df)
+
         return copy.deepcopy(new_df_arr)
 
     @staticmethod
