@@ -396,6 +396,12 @@ class UlgParser:
         att_dfsp['roll sp'] = att_dfsp['roll_body'].values * 180 / np.pi
         att_dfsp['pitch sp'] = att_dfsp['pitch_body'].values * 180 / np.pi
         att_dfsp['yaw sp'] = att_dfsp['yaw_body'].values * 180 / np.pi
+        att_dfsp['angle norm sp'] = np.linalg.norm(
+            [att_dfsp['roll sp'].values,
+             att_dfsp['pitch sp'].values,
+             att_dfsp['yaw sp'].values],
+            axis=0
+        )
         att_dfsp = PandasTools.convert_index_from_us_to_s(att_dfsp)
 
         return [att_df, att_dfsp]
@@ -420,6 +426,12 @@ class UlgParser:
         angvelsp_df['roll rate sp'] = angvelsp_df['roll'].values * 180 / np.pi
         angvelsp_df['pitch rate sp'] = angvelsp_df['pitch'].values * 180 / np.pi
         angvelsp_df['yaw rate sp'] = angvelsp_df['yaw'].values * 180 / np.pi
+        angvelsp_df['pqr norm sp'] = np.linalg.norm(
+            [angvelsp_df['roll rate sp'].values,
+             angvelsp_df['pitch rate sp'].values,
+             angvelsp_df['yaw rate sp'].values],
+            axis=0
+        )
         angvelsp_df = PandasTools.convert_index_from_us_to_s(angvelsp_df)
 
         return [angvel_df, angvelsp_df]
@@ -663,6 +675,7 @@ class UlgParserTools:
                 'roll': np.interp(x, xp, fp=ulg_df['roll']),
                 'pitch': np.interp(x, xp, fp=ulg_df['pitch']),
                 'yaw': np.interp(x, xp, fp=ulg_df['yaw']),
+                'angle norm': np.interp(x, xp, fp=ulg_df['angle norm']),
             }
             return data
         if ulg_type == 'ulg_attsp_df':
@@ -670,7 +683,7 @@ class UlgParserTools:
                 'roll': np.interp(x, xp, fp=ulg_df['roll_body']),
                 'pitch': np.interp(x, xp, fp=ulg_df['pitch_body']),
                 'yaw': np.interp(x, xp, fp=ulg_df['yaw_body']),
-                'angle norm': np.interp(x, xp, fp=ulg_df['angle norm']),
+                'angle norm sp': np.interp(x, xp, fp=ulg_df['angle norm sp']),
             }
             return data
         if ulg_type == 'ulg_angvel_df':
@@ -686,6 +699,7 @@ class UlgParserTools:
                 'roll rate sp': np.interp(x, xp, fp=ulg_df['roll rate sp']),
                 'pitch rate sp': np.interp(x, xp, fp=ulg_df['pitch rate sp']),
                 'yaw rate sp': np.interp(x, xp, fp=ulg_df['yaw rate sp']),
+                'pqr norm sp': np.interp(x, xp, fp=ulg_df['pqr norm sp']),
             }
             return data
         if ulg_type == 'ulg_sticks_df':
