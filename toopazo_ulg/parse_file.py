@@ -384,6 +384,12 @@ class UlgParser:
         csvname = 'vehicle_attitude_0_deg'
         att_df = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
         att_df = PandasTools.convert_index_from_us_to_s(att_df)
+        att_df['pqr norm'] = np.linalg.norm(
+            [att_df['roll rate'].values,
+             att_df['pitch rate'].values,
+             att_df['yaw rate'].values],
+            axis=0
+        )
 
         csvname = 'vehicle_attitude_setpoint_0'
         att_dfsp = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)

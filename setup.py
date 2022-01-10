@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="toopazo_ulg",    # Replace with your own username
-    version="0.0.48",
+    version="0.0.49",
     author="toopazo",
     author_email="toopazo@protonmail.com",
     description="Python package to process and plot Px4 .ulg files",
