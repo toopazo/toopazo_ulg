@@ -383,13 +383,13 @@ class UlgParser:
     def get_rpy_angles_df(tmpdir, ulgfile):
         csvname = 'vehicle_attitude_0_deg'
         att_df = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
-        att_df = PandasTools.convert_index_from_us_to_s(att_df)
-        att_df['pqr norm'] = np.linalg.norm(
-            [att_df['roll rate'].values,
-             att_df['pitch rate'].values,
-             att_df['yaw rate'].values],
+        att_df['angle norm'] = np.linalg.norm(
+            [att_df['roll'].values,
+             att_df['pitch'].values,
+             att_df['yaw'].values],
             axis=0
         )
+        att_df = PandasTools.convert_index_from_us_to_s(att_df)
 
         csvname = 'vehicle_attitude_setpoint_0'
         att_dfsp = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
@@ -407,6 +407,12 @@ class UlgParser:
         angvel_df['roll rate'] = angvel_df['xyz[0]'].values * 180 / np.pi
         angvel_df['pitch rate'] = angvel_df['xyz[1]'].values * 180 / np.pi
         angvel_df['yaw rate'] = angvel_df['xyz[2]'].values * 180 / np.pi
+        angvel_df['pqr norm'] = np.linalg.norm(
+            [angvel_df['roll rate'].values,
+             angvel_df['pitch rate'].values,
+             angvel_df['yaw rate'].values],
+            axis=0
+        )
         angvel_df = PandasTools.convert_index_from_us_to_s(angvel_df)
 
         csvname = 'vehicle_rates_setpoint_0'
