@@ -670,6 +670,7 @@ class UlgParserTools:
                 'roll': np.interp(x, xp, fp=ulg_df['roll_body']),
                 'pitch': np.interp(x, xp, fp=ulg_df['pitch_body']),
                 'yaw': np.interp(x, xp, fp=ulg_df['yaw_body']),
+                'angle norm': np.interp(x, xp, fp=ulg_df['angle norm']),
             }
             return data
         if ulg_type == 'ulg_angvel_df':
@@ -677,6 +678,7 @@ class UlgParserTools:
                 'roll rate': np.interp(x, xp, fp=ulg_df['roll rate']),
                 'pitch rate': np.interp(x, xp, fp=ulg_df['pitch rate']),
                 'yaw rate': np.interp(x, xp, fp=ulg_df['yaw rate']),
+                'pqr norm': np.interp(x, xp, fp=ulg_df['pqr norm']),
             }
             return data
         if ulg_type == 'ulg_angvelsp_df':
