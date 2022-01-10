@@ -490,19 +490,18 @@ class UlgParser:
             df_pv = UlgParser.get_pos_vel_df(tmpdir, ulg_file)
             # ulg_pv_df = PandasTools.apply_time_win(df_pv)
 
-            # [df_att, df_attsp] = UlgParser.get_rpy_angles_df(
-            #     tmpdir, ulg_file, time_win=None)
+            [att_df, attsp_df] = UlgParser.get_rpy_angles_df(tmpdir, ulg_file)
             # ulg_att_df = PandasTools.apply_time_win(df_att)
             # ulg_attsp_df = PandasTools.apply_time_win(df_attsp)
             #
-            # [df_angvel, df_angvelsp] = UlgParser.get_pqr_angvel_df(
-            #     tmpdir, ulg_file, time_win=None)
+            [angvel_df, angvelsp_df] = UlgParser.get_pqr_angvel_df(
+                tmpdir, ulg_file)
             # ulg_angvel_df = PandasTools.apply_time_win(df_angvel)
             # ulg_angvelsp_df = PandasTools.apply_time_win(
             #     df_angvelsp)
             #
-            # [df_sticks, df_switches] = UlgParser.get_man_ctrl_df(
-            #     tmpdir, ulg_file, time_win=None)
+            [sticks_df, switches_df] = UlgParser.get_man_ctrl_df(
+                tmpdir, ulg_file)
             # ulg_sticks_df = PandasTools.apply_time_win(df_sticks)
             # ulg_switches_df = PandasTools.apply_time_win(
             #     df_switches)
@@ -513,12 +512,12 @@ class UlgParser:
 
             ulg_df_dict = {
                 'ulg_pv_df': df_pv,
-                # 'ulg_att_df': ulg_att_df,
-                # 'ulg_attsp_df': ulg_attsp_df,
-                # 'ulg_angvel_df': ulg_angvel_df,
-                # 'ulg_angvelsp_df': ulg_angvelsp_df,
-                # 'ulg_sticks_df': ulg_sticks_df,
-                # 'ulg_switches_df': ulg_switches_df,
+                'ulg_att_df': att_df,
+                'ulg_attsp_df': attsp_df,
+                'ulg_angvel_df': angvel_df,
+                'ulg_angvelsp_df': angvelsp_df,
+                'ulg_sticks_df': sticks_df,
+                'ulg_switches_df': switches_df,
                 'ulg_in_df': df_in,
                 'ulg_out_df': df_out,
             }
