@@ -375,7 +375,7 @@ class UlgPlotBasics:
         # fig.autofmt_xdate()
 
     def pos_vel(self, ulgfile, time_win):
-        df_pv = UlgParser.get_pos_vel_df(self.tmpdir, ulgfile, time_win)
+        df_pv = UlgParser.get_xyz_posvel_df(self.tmpdir, ulgfile, time_win)
 
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=self.figsize, sharex=True)
         df_pv.plot(y=['x', 'y', 'z', 'pnorm'], ax=ax1, grid=True)

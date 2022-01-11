@@ -365,7 +365,7 @@ class UlgParser:
         return df
 
     @staticmethod
-    def get_pos_vel_df(tmpdir, ulgfile):
+    def get_xyz_posvel_df(tmpdir, ulgfile):
         csvname = 'vehicle_local_position_0'
         pv_df = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
         pv_df['vnorm'] = np.linalg.norm(
@@ -378,6 +378,23 @@ class UlgParser:
         )
         pv_df = PandasTools.convert_index_from_us_to_s(pv_df)
         return pv_df
+
+    @staticmethod
+    def get_xyz_accel_df(tmpdir, ulgfile):
+        csvname = 'vehicle_acceleration_0'
+        accel_df = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        accel_df['ax'] = accel_df['xyz[0]'].values
+        accel_df['ay'] = accel_df['xyz[1]'].values
+        accel_df['az'] = accel_df['xyz[2]'].values
+        accel_df['acc norm'] = np.linalg.norm(
+            [accel_df['ax'].values,
+             accel_df['ay'].values,
+             accel_df['az'].values],
+            axis=0
+        )
+        accel_df = PandasTools.convert_index_from_us_to_s(accel_df)
+
+        return accel_df
 
     @staticmethod
     def get_rpy_angles_df(tmpdir, ulgfile):
@@ -437,6 +454,23 @@ class UlgParser:
         return [angvel_df, angvelsp_df]
 
     @staticmethod
+    def get_pqr_angacc_df(tmpdir, ulgfile):
+        csvname = 'vehicle_angular_acceleration_0'
+        angacc_df = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
+        angacc_df['p rate'] = angacc_df['xyz[0]'].values * 180 / np.pi
+        angacc_df['q rate'] = angacc_df['xyz[1]'].values * 180 / np.pi
+        angacc_df['r rate'] = angacc_df['xyz[2]'].values * 180 / np.pi
+        angacc_df['angacc norm'] = np.linalg.norm(
+            [angacc_df['p rate'].values,
+             angacc_df['q rate'].values,
+             angacc_df['r rate'].values],
+            axis=0
+        )
+        angacc_df = PandasTools.convert_index_from_us_to_s(angacc_df)
+
+        return angacc_df
+
+    @staticmethod
     def get_man_ctrl_df(tmpdir, ulgfile):
         csvname = 'manual_control_setpoint_0'
         sticks_df = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
@@ -462,9 +496,9 @@ class UlgParser:
         in_df = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
         in_df.rename(
             columns={
-                "control[0]": "roll rate cmd",
-                "control[1]": "pitch rate cmd",
-                "control[2]": "yaw rate cmd",
+                "control[0]": "p rate cmd",
+                "control[1]": "q rate cmd",
+                "control[2]": "r rate cmd",
                 'control[3]': "az cmd"
             },
             inplace=True)
@@ -481,9 +515,9 @@ class UlgParser:
     def get_firefly_delta_df(tmpdir, ulgfile):
         csvname = 'firefly_delta'
         in_df = UlgParser.get_pandas_dataframe(tmpdir, ulgfile, csvname)
-        in_df.rename(columns={"control[0]": "roll rate cmd",
-                              "control[1]": "pitch rate cmd",
-                              "control[2]": "yaw rate cmd",
+        in_df.rename(columns={"control[0]": "p rate cmd",
+                              "control[1]": "q rate cmd",
+                              "control[2]": "r rate cmd",
                               'control[3]': "az cmd"},
                      inplace=True)
         in_df = PandasTools.convert_index_from_us_to_s(in_df)
@@ -500,9 +534,13 @@ class UlgParser:
         if not os.path.isfile(ulg_file):
             return None
         else:
-            pv_df = UlgParser.get_pos_vel_df(
+            pv_df = UlgParser.get_xyz_posvel_df(
+                tmpdir, ulg_file)
+            accel_df = UlgParser.get_xyz_accel_df(
                 tmpdir, ulg_file)
             [att_df, attsp_df] = UlgParser.get_rpy_angles_df(
+                tmpdir, ulg_file)
+            angacc_df = UlgParser.get_pqr_angacc_df(
                 tmpdir, ulg_file)
             [angvel_df, angvelsp_df] = UlgParser.get_pqr_angvel_df(
                 tmpdir, ulg_file)
@@ -512,10 +550,12 @@ class UlgParser:
 
             ulg_df_dict = {
                 'ulg_pv_df': pv_df,
+                'ulg_accel_df': accel_df,
                 'ulg_att_df': att_df,
                 'ulg_attsp_df': attsp_df,
                 'ulg_angvel_df': angvel_df,
                 'ulg_angvelsp_df': angvelsp_df,
+                'ulg_angacc_df': angacc_df,
                 'ulg_sticks_df': sticks_df,
                 'ulg_switches_df': switches_df,
                 'ulg_in_df': in_df,
@@ -670,6 +710,14 @@ class UlgParserTools:
                 'pnorm': np.interp(x, xp, fp=ulg_df['pnorm']),
             }
             return data
+        if ulg_type == 'ulg_accel_df':
+            data = {
+                'ax': np.interp(x, xp, fp=ulg_df['ax']),
+                'ay': np.interp(x, xp, fp=ulg_df['ay']),
+                'az': np.interp(x, xp, fp=ulg_df['az']),
+                'acc norm': np.interp(x, xp, fp=ulg_df['acc norm']),
+            }
+            return data
         if ulg_type == 'ulg_att_df':
             data = {
                 'roll': np.interp(x, xp, fp=ulg_df['roll']),
@@ -702,6 +750,14 @@ class UlgParserTools:
                 'pqr norm sp': np.interp(x, xp, fp=ulg_df['pqr norm sp']),
             }
             return data
+        if ulg_type == 'ulg_angacc_df':
+            data = {
+                'p rate': np.interp(x, xp, fp=ulg_df['p rate']),
+                'q rate': np.interp(x, xp, fp=ulg_df['q rate']),
+                'r rate': np.interp(x, xp, fp=ulg_df['r rate']),
+                'angacc norm': np.interp(x, xp, fp=ulg_df['angacc norm']),
+            }
+            return data
         if ulg_type == 'ulg_sticks_df':
             data = {
                 'roll stick': np.interp(x, xp, fp=ulg_df['roll stick']),
@@ -730,9 +786,9 @@ class UlgParserTools:
             return data
         if ulg_type == 'ulg_in_df':
             data = {
-                'roll rate cmd': np.interp(x, xp, fp=ulg_df['roll rate cmd']),
-                'pitch rate cmd': np.interp(x, xp, fp=ulg_df['pitch rate cmd']),
-                'yaw rate cmd': np.interp(x, xp, fp=ulg_df['yaw rate cmd']),
+                'p rate cmd': np.interp(x, xp, fp=ulg_df['p rate cmd']),
+                'q rate cmd': np.interp(x, xp, fp=ulg_df['q rate cmd']),
+                'r rate cmd': np.interp(x, xp, fp=ulg_df['r rate cmd']),
                 'az cmd': np.interp(x, xp, fp=ulg_df['az cmd']),
             }
             return data
