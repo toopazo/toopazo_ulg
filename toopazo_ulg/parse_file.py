@@ -583,17 +583,17 @@ class UlgParserTools:
                 print('Mean sampling time of %s is %s s' % (key, mst))
 
         new_index = UlgParserTools.get_overlapping_index(ulg_dict, verbose)
-        new_df_arr = UlgParserTools.resample_ulg_dict(ulg_dict, new_index)
+        new_ulg_dict = UlgParserTools.resample_ulg_dict(ulg_dict, new_index)
 
         if verbose:
             print('After')
-            for key, df in new_df_arr.items():
+            for key, df in new_ulg_dict.items():
                 # print(key)
                 # print(df)
                 mst = np.mean(np.diff(df.index))
                 print('Mean sampling time of %s is %s s' % (key, mst))
 
-        return copy.deepcopy(new_df_arr)
+        return copy.deepcopy(new_ulg_dict)
 
     @staticmethod
     def get_overlapping_index(ulg_dict, verbose):
